@@ -18,9 +18,6 @@
 \usepackage{lmodern}
 \ifPDFTeX\else
   % xetex/luatex font selection
-  \setmainfont[]{DejaVu Serif}
-  \setsansfont[]{DejaVu Sans}
-  \setmonofont[]{DejaVu Sans Mono}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -66,10 +63,6 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\usepackage{array}
-\setlength{\tabcolsep}{3pt}
-\renewcommand{\arraystretch}{1.08}
-\sloppy
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -261,28 +254,32 @@ complete representation of all g-C₃N₄ phases.
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1875}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-Support
+Support family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Model shorthand
+Model definition
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Metals
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
-SACs
+Bare SAC count
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Question
+Principal chemical question
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-N-graphene & 4×4 sheet; N anchor & Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt,
-Au & 10 & M--N coordination; nitrate/H competition \\
-MoS₂ vacancy & 4×4 2H-MoS₂; one S vacancy & Fe, Co, Ni, Cu, Zn, Ru, Rh,
-Pd, Pt, Au & 10 & Vacancy binding; adsorbate activation \\
-g-C₃N₄-like & 4×4 labelled C--N model & Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd,
-Pt, Au & 10 & N-rich support comparison \\
-\textbf{Total} & \textbf{Matched starting matrix} & \textbf{10 metals} &
-\textbf{30} & \textbf{Support--metal and pathway sensitivity} \\
+Nitrogenated graphene & 4 × 4 periodic carbon sheet with a reproducible
+N-anchor construction & Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, Au & 10 &
+How does M--N coordination alter nitrate/H competition? \\
+2H-MoS₂ sulphur vacancy & 4 × 4 2H-MoS₂ starting sheet with one S
+vacancy & Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, Au & 10 & How does a
+chalcogen vacancy alter site binding and adsorbate activation? \\
+g-C₃N₄-like & 4 × 4 labelled carbon--nitrogen starting model & Fe, Co,
+Ni, Cu, Zn, Ru, Rh, Pd, Pt, Au & 10 & How does a nitrogen-rich support
+compare with graphene and MoS₂? \\
+\textbf{Total} & \textbf{Matched initial matrix} & \textbf{10 metals} &
+\textbf{30} & \textbf{Support--metal interaction and pathway
+sensitivity} \\
 \end{longtable}
 
 The matched design is useful only if the models remain comparable. The
@@ -391,9 +388,7 @@ thermochemistry}\label{adsorption-energies-and-thermochemistry}}
 For a consistently referenced neutral adsorption process, the electronic
 adsorption energy is
 
-\[
-E_{ads}=E_{SAC+X}-E_{SAC}-E_X.
-\]
+{[} E\_\{ads\}=E\_\{SAC+X\}-E\_\{SAC\}-E\_X. {]}
 
 The equation is simple, but the reference is not. A gas-phase molecule,
 aqueous species, solvated ion, and CHE-derived chemical potential are
@@ -407,9 +402,7 @@ settings in the same record.
 For a proton--electron pair, the CHE convention adopted in the project
 is
 
-\[
-\mu(H^+ + e^-;U)=\tfrac{1}{2}G(H_2)-eU,
-\]
+{[} \mu(H\^{}+ + e\^{}-;U)=\tfrac{1}{2}G(H\_2)-eU, {]}
 
 where U is referenced consistently to the chosen hydrogen-electrode
 convention. The code utility treats the integer argument as the number
@@ -462,27 +455,28 @@ they do not establish chemical stability or catalytic activity.
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2308}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-Artefact
+Artefact class
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 Number
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Audit
+Audit result
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Interpretation
+Scientific interpretation
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Support references & 6 & 0 failures & Valid starting cells \\
-Bare SAC inputs & 30 & 0 failures & Starting configurations; not relaxed
-results \\
-SAC + H inputs & 30 & 0 failures & Adsorption inputs; charge treatment
-required \\
-SAC + NO₃ inputs & 30 & 0 failures & Adsorption inputs; nitrate is
-charged \\
+Pristine/defect/support reference structures & 6 & 0 failures & Valid
+starting cells under geometric checks \\
+Bare SAC structures & 30 & 0 failures & Valid starting configurations;
+not relaxed results \\
+SAC + H starting structures & 30 & 0 failures & Adsorption inputs only;
+charge treatment remains required \\
+SAC + NO₃ starting structures & 30 & 0 failures & Adsorption inputs
+only; nitrate is charged \\
 \textbf{Total} & \textbf{96} & \textbf{0 geometric failures} &
-\textbf{Complete traceable input inventory} \\
+\textbf{Input inventory complete and traceable} \\
 \end{longtable}
 
 \hypertarget{gpaw-execution-verification}{%
@@ -528,21 +522,21 @@ absolute total energies are listed below.
   >{\raggedright\arraybackslash}p{(\columnwidth - 14\tabcolsep) * \real{0.1071}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
-Family
+Test family
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
 Setting
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
-Cutoff
+Cutoff (eV)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 k-mesh
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
-Vacuum
+Vacuum (Å)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Spin
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
-Energy (eV)
+Total energy (eV)
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-QC
+QC status
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -566,7 +560,7 @@ validate open-shell SAC spin states.
 
 \begin{figure}
 \centering
-\includegraphics{figures/final/convergence_benchmark.png}
+\includegraphics{../figures/final/convergence_benchmark.png}
 \caption{Figure 1. Compact periodic graphene convergence benchmark}
 \end{figure}
 
@@ -614,28 +608,28 @@ diagnostics rather than converted into formation or adsorption energies.
 \begin{minipage}[b]{\linewidth}\raggedright
 Run
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Mode
+Calculator mode
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Setting
+Cutoff/basis
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 k-mesh
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
-Steps
+Ionic steps
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Status
+Optimiser status
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Use
+Acceptance
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Fe@graphene & LCAO diagnostic & dzp-labelled & 1×1×1 & 12 & Converged
-under its criterion & Diagnostic only \\
-Fe@graphene & Plane-wave & 150 eV & 1×1×1 & 5 & Not converged &
+Fe@graphene & Earlier LCAO diagnostic & dzp-labelled run & 1×1×1 & 12 &
+Converged under that run's criterion & Diagnostic record only \\
+Fe@graphene & Plane-wave diagnostic & 150 eV & 1×1×1 & 5 & Not converged
+& Diagnostic only \\
+Fe@MoS₂ & Plane-wave diagnostic & 150 eV & 1×1×1 & 5 & Not converged &
 Diagnostic only \\
-Fe@MoS₂ & Plane-wave & 150 eV & 1×1×1 & 5 & Not converged & Diagnostic
-only \\
 \end{longtable}
 
 \hypertarget{scientific-interpretation-and-implications}{%

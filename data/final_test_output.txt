@@ -1,0 +1,12 @@
+RUN scripts/tests/test_chemistry_utils.py
+All chemistry utility tests passed
+RUN scripts/tests/test_vasp_inputs.py
+VASP input generator test passed
+pytest_unavailable=No module named pytest
+
+MANUSCRIPT_METRICS
+words=5298
+references=25
+figure_links=1
+
+GIT

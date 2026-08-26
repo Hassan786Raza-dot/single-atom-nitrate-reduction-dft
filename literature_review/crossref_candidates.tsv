@@ -1,0 +1,84 @@
+## nitrate electroreduction ammonia DFT
+	10.1021/acs.jpcc.3c00785.s001		PdMoCu Trimetallenes for Nitrate Electroreduction to Ammonia
+	10.1021/acsanm.5c05668.s001		NiCoP4O12 Nanosheets for Electroreduction of Nitrate to Ammonia
+	10.1021/acsami.4c14621.s001		Amorphous Ni3B Promotes Electroreduction of Nitrate to Ammonia
+	10.1021/acs.langmuir.5c06053.s001		CoCuSiB Nanocrystalline for Efficient Nitrate-to-Ammonia Electroreduction
+	10.1021/acsami.1c12512.s001		Efficient Nitrate-to-Ammonia Electroreduction at Cobalt Phosphide Nanoshuttles
+	10.1021/acsami.1c19412.s001		Electroreduction of Nitrate to Ammonia on PalladiumCobaltOxygen Nanowire Arrays
+	10.1021/acsnano.3c05946.s001		Ampere-Level Nitrate Electroreduction to Ammonia over Monodispersed Bi-Doped FeS2
+	10.1021/acs.jpclett.2c02452.s001		Predictive Theoretical Model for the Selective Electroreduction of Nitrate to Ammonia
+	10.1021/acscatal.4c03336.s001		Dynamically Restructuring Nanoporous CuCo Electrocatalyst for Efficient Nitrate Electroreduction to Ammonia
+2025	10.1039/d5cy01336d/v1/review3		Review for "pH-dependent Electrolyte Manipulation in Nitrate Electroreduction to Ammonia"
+
+## single atom catalyst nitrate reduction
+	10.1021/acs.est.2c07968.s001		Electrocatalytic Reduction of Nitrate to Ammonia via a Au/Cu Single Atom Alloy Catalyst
+2025	10.1039/d5cp00117j/v1/review3		Review for "Theoretical exploration of single‑atom catalyst anchored on β12-borophene for electrochemical nitrate reduction: catalyst screening and mechanistic insight"
+2025	10.1039/d5cp00117j/v1/review2		Review for "Theoretical exploration of single‑atom catalyst anchored on β12-borophene for electrochemical nitrate reduction: catalyst screening and mechanistic insight"
+2025	10.1039/d5cp00117j/v2/review1		Review for "Theoretical exploration of single‑atom catalyst anchored on β12-borophene for electrochemical nitrate reduction: catalyst screening and mechanistic insight"
+2025	10.1039/d5cp00117j/v2/review2		Review for "Theoretical exploration of single‑atom catalyst anchored on β12-borophene for electrochemical nitrate reduction: catalyst screening and mechanistic insight"
+2025	10.1039/d5cp00117j/v1/review1		Review for "Theoretical exploration of single‑atom catalyst anchored on β12-borophene for electrochemical nitrate reduction: catalyst screening and mechanistic insight"
+	10.1021/jacs.6c00705.s001		Operando Cu Aggregation-Induced Spin State Modulation in FeCu Single Atom Catalyst for Enhanced Tandem Electrochemical Nitrate Reduction Reaction
+	10.1021/acs.est.4c14011.s001		One-Step Strategy to Maximize Single-Atom Catalyst Utilization in Nitrate Reduction via Bidirectional Optimization of Mass Transfer and Electron Supply
+	10.1021/acsestengg.5c00749.s001		Transition-Metal Single-Atom Alloy Electrocatalysts for Nitrate Reduction
+2025	10.1039/d5cp00117j/v1/decision1		Decision letter for "Theoretical exploration of single‑atom catalyst anchored on β12-borophene for electrochemical nitrate reduction: catalyst screening and mechanistic insight"
+
+## computational hydrogen electrode electrocatalysis
+2020	10.1007/978-3-319-44680-6_9	Handbook of Materials Modeling	Electrocatalysis Beyond the Computational Hydrogen Electrode
+2018	10.1007/978-3-319-50257-1_9-1	Handbook of Materials Modeling	Electrocatalysis Beyond the Computational Hydrogen Electrode
+2010	10.1201/9781420045451-27	Electrocatalysis: Computational, Experimental, and Industrial Aspects	Electrode Modiﬁcation: Application in Organic Electrocatalysis
+	10.31274/rtd-180813-13051		Development of novel electrode materials for the electrocatalysis of oxygen-transfer and hydrogen-transfer reactions
+2010	10.1201/9781420045451-c21	Surfactant Science Electrocatalysis	Electrode Modification
+2010	10.1201/9781420045451-16	Electrocatalysis: Computational, Experimental, and Industrial Aspects	Problem of Surface Relaxation and Atom Rearrangement on Electrode Surfaces
+2025	10.5772/intechopen.1011955	Advances in Electrocatalysis	Recent Advancements on Key Electrode Materials of Seawater Electrolysis for Hydrogen Production
+2010	10.1201/9781420045451-13	Electrocatalysis: Computational, Experimental, and Industrial Aspects	Electrode Catalysis versus Enzyme Catalysis: Theoretical Modeling of a Biological Enzyme
+2022	10.1007/s12678-021-00702-6	Electrocatalysis	Wide-Range Alkaline Hydrogen Peroxide Concentration Soft-Sensor with Ohmic Drop Compensation Base on a Normal Glass-Carbon Electrode
+2023	10.26434/chemrxiv-2023-0p036		Electrocatalysis of hydrogen and oxygen electrode reactions in alkaline media by Rh-modified polycrystalline Ni electrode
+
+## implicit solvation electrochemical DFT
+	10.1021/acs.jctc.5b00949.s001		Multigrid-Based Methodology for Implicit Solvation Models in Periodic DFT
+	10.1021/acs.jpcb.5c05891.s001		Data-Efficient Equivariant NNPs Enable DFT-Accurate Simulations and Implicit Solvation Free Energies
+	10.1021/acs.jpcb.5c05891.s002		Data-Efficient Equivariant NNPs Enable DFT-Accurate Simulations and Implicit Solvation Free Energies
+	10.1021/acs.jpcb.3c07007.s001		Determination of Amino Acids pKa: Importance of Cavity Scaling within Implicit Solvation Models and Choice of DFT Functionals
+	10.1021/acs.jpcc.8b10046.s001		Assessment of Constant-Potential Implicit Solvation Calculations of Electrochemical Energy Barriers for H2 Evolution on Pt
+	10.1021/acs.jpcc.0c08610.s001		Lithium Peroxide Growth in LiO2 Batteries via Chemical Disproportionation and Electrochemical Mechanisms: A Potential-Dependent Ab Initio Study with Implicit Solvation
+	10.1021/acs.jpcb.2c06756.s002		The Impact of DFT Functional, Cluster Model Size and Implicit Solvation on the Structural Description of Single-Metal-Mediated DNA Phosphodiester Bond Cleavage: The Case Study of APE1
+	10.1021/acs.jpcb.2c06756.s001		The Impact of DFT Functional, Cluster Model Size and Implicit Solvation on the Structural Description of Single-Metal-Mediated DNA Phosphodiester Bond Cleavage: The Case Study of APE1
+2018	10.26434/chemrxiv.7208531.v1		Assessment of Constant-Potential Implicit Solvation Calculations of Electrochemical Energy Barriers
+	10.1021/acs.jctc.7b00698.s001		Implicit Solvation Using the Superposition Approximation (IS-SPA): An Implicit Treatment of the Nonpolar Component to Solvation for Simulating Molecular Aggregation
+
+## single atom catalysts two dimensional materials review
+	10.1021/acs.chemmater.8b03796.s001		Single-Atom Electroplating on Two Dimensional Materials
+	10.1021/acs.jpclett.0c00676.s001		Descriptor-Based Design Principle for Two-Dimensional Single-Atom Catalysts: Carbon Dioxide Electroreduction
+	10.1021/acsnano.5c13145.s001		Enhanced Antibacterial Efficacy of Copper Single-Atom Catalysts on a Two-Dimensional Boron Nitride Platform
+	10.1021/acscatal.5c00199.s001		Optimal Solution for Modeling Electrocatalysis on Two-Dimensional Single-Atom Catalysts with Grand Canonical DFT
+	10.1021/acs.nanolett.5c06069.s001		Porosity-Triggered Efficient Single-Atom Catalysis in Two-Dimensional Materials
+	10.1021/acsnano.6c01244.s001		Correction to Enhanced Antibacterial Efficacy of Copper Single-Atom Catalysts on Two-Dimensional Boron Nitride Platform
+2019	10.1016/bs.adomc.2019.01.002	Advances in Organometallic Chemistry	Surface coordination chemistry on graphene and two-dimensional carbon materials for well-defined single atom supported catalysts
+2024	10.3390/ma17246134	Materials	Theoretical Investigation of Single-Atom Catalysts for Hydrogen Evolution Reaction Based on Two-Dimensional Tetragonal Mo3C2
+	10.1021/acs.langmuir.5c01839.s001		Computational Investigation of Single-Atom Catalysts Anchored on Nitrogen-Doped Two-Dimensional NbSe2 for Highly Selective CO2 Reduction to Methane
+2025	10.3390/ma18050931	Materials	Theoretical Investigation of Single-Atom Catalysts for Hydrogen Evolution Reaction Based on Two-Dimensional Tetragonal V2C2 and V3C3
+
+## microkinetic modelling electrocatalysis DFT
+2025	10.1039/d5cp04301h/v1/review2		Review for "Electrochemical Hydrogen Evolution on Ni&lt;sub&gt;2&lt;/sub&gt;P: Insights from Constant-Potential DFT and Microkinetic Modelling"
+2026	10.1039/d5cp04301h/v2/review1		Review for "Electrochemical Hydrogen Evolution on Ni&lt;sub&gt;2&lt;/sub&gt;P: Insights from Constant-Potential DFT and Microkinetic Modelling"
+2025	10.1039/d5cp04301h/v1/review1		Review for "Electrochemical Hydrogen Evolution on Ni&lt;sub&gt;2&lt;/sub&gt;P: Insights from Constant-Potential DFT and Microkinetic Modelling"
+	10.1021/acs.jpclett.4c02162.s002		Microkinetic Model to Rationalize the Lifetime of Electrocatalysis: Trade-off between Activity and Stability
+	10.1021/acs.jpcc.5c07476.s001		Electrocatalysis of Oxygen Evolution Reaction on Iron-Loaded Nickel Phosphide from Microkinetic Theory
+	10.1021/acs.jpclett.4c02162.s004		Microkinetic Model to Rationalize the Lifetime of Electrocatalysis: Trade-off between Activity and Stability
+	10.1021/acs.jpclett.4c02162.s003		Microkinetic Model to Rationalize the Lifetime of Electrocatalysis: Trade-off between Activity and Stability
+	10.1021/acs.jpclett.4c02162.s001		Microkinetic Model to Rationalize the Lifetime of Electrocatalysis: Trade-off between Activity and Stability
+	10.1021/acscatal.6b01633.s001		Partial Oxidation of Methanol on MoO3 (010): A DFT and Microkinetic Study
+2025	10.1039/d5cp04301h/v1/decision1		Decision letter for "Electrochemical Hydrogen Evolution on Ni&lt;sub&gt;2&lt;/sub&gt;P: Insights from Constant-Potential DFT and Microkinetic Modelling"
+
+## reproducibility computational chemistry data code
+2022	10.31234/osf.io/bf28t		Improving the Computational Reproducibility of Clinical Science: Tools for Open Data and Code
+2022	10.1002/9781119795520.ch7	SAR Image Analysis – A Computational Statistics Approach	Reproducibility and Replicability
+2012	10.4155/fmc.12.160	Future Medicinal Chemistry	Is That A Scientific Publication Or An Advertisement? Reproducibility, Source Code And Data In The Computational Chemistry Literature
+2024	10.31222/osf.io/rv6xd		Unintended Code Errors and Computational Reproducibility
+2019	10.1109/jcdl.2019.00114	2019 ACM/IEEE Joint Conference on Digital Libraries (JCDL)	Preparing Code and Data for Computational Reproducibility
+2020	10.1145/3383583.3398714	Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020	Preparing Code and Data for Computational Reproducibility
+2021	10.1038/s41562-021-01190-w	Nature Human Behaviour	Supporting computational reproducibility through code review
+2024	10.1162/99608f92.ea5e6f9a	Harvard Data Science Review	After Computational Reproducibility: Scientific Reproducibility and Trustworthy AI
+	10.7554/elife.29639.014		Source code 2. Calculation of reproducibility.
+	10.7717/peerj-cs.3896/supp-1		Supplemental Information 1: Code for reproducibility.
+

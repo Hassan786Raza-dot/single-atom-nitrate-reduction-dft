@@ -1,63 +1,230 @@
-# DFT-guided screening of isolated metal sites on two-dimensional supports for nitrate-to-ammonia electroreduction: a reproducible workflow and benchmark audit
+# Reproducible periodic-DFT screening of isolated metal sites on two-dimensional supports for nitrate-to-ammonia electroreduction: model design, numerical validation, and an auditable benchmark
 
 ## Abstract
 
-Electrochemical nitrate reduction offers a route for coupling nitrate remediation with ammonia production, but mechanistic interpretation is complicated by multiple proton-coupled electron-transfer steps, competing hydrogen evolution, charged intermediates, and support-dependent single-atom electronic structure. Here we establish a reproducible computational workflow for matched comparisons of isolated Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, and Au sites on nitrogenated graphene, sulphur-vacancy 2H-MoS₂, and a labelled g-C₃N₄-like starting model. The workflow archives structures, calculator settings, convergence tests, raw outputs, and machine-readable audit records. An open-source GPAW implementation was verified through a periodic graphene calculation, and 36 support/SAC starting structures plus 60 nitrate/hydrogen starting structures passed automated cell, vacuum, contact, and periodicity checks. A compact 11-case benchmark demonstrated that initial cutoff, k-point, and vacuum settings were not yet converged, whereas the closed-shell graphene spin comparison was stable. Coarse Fe@graphene and Fe@MoS₂ optimisations were completed as diagnostics but did not meet the production force criterion. These results establish the reproducibility baseline and identify the exact numerical controls required before mechanistic rankings are attempted. The complete 30-model, solvation-aware reaction study remains a defined computational stage rather than a claimed result.
+Electrochemical nitrate reduction to ammonia is an attractive route for coupling nitrate remediation with recovery of a nitrogen-containing product, but mechanistic interpretation remains difficult because the reaction contains several proton-coupled electron-transfer steps, competing hydrogen evolution, charged aqueous intermediates, and support-dependent metal electronic structures [1–5]. Single-atom catalysts offer a chemically useful platform for separating the effects of metal identity and local coordination, yet their apparent activity can be confounded by model size, support defects, magnetic state, dispersion, solvation, and the choice between canonical and constant-potential treatments [6–12]. Here we establish and audit a reproducible periodic-DFT workflow for matched comparisons of Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, and Au sites on nitrogenated graphene, sulphur-vacancy 2H-MoS₂, and a labelled g-C₃N₄-like starting model. The project archives structure generators, VASP-compatible input policies, GPAW execution scripts, raw outputs, data schemas, reference metadata, convergence records, and automated quality-control results. An open-source GPAW 24.1.0 implementation was verified through a periodic graphene calculation. The structure workflow generated 36 support, defect, and bare-SAC starting structures and 60 nitrate/hydrogen starting structures; all passed periodic-cell, vacuum, contact, and file-integrity checks after correction of two construction errors. An eleven-case compact benchmark showed substantial sensitivity of absolute total energies to plane-wave cutoff, k-point sampling, and vacuum height, whereas the closed-shell graphene spin comparison was stable. Two coarse Fe-SAC optimisations were completed as execution diagnostics but did not satisfy the production force criterion. The principal outcome is therefore an auditable computational foundation rather than an unsupported catalyst ranking. The repository explicitly identifies the additional converged optimisations, charged-nitrate treatment, solvation checks, transition states, thermochemistry, and pathway analysis required before publication claims about activity or selectivity can be made.
+
+**Keywords:** nitrate electroreduction; ammonia synthesis; single-atom catalysts; two-dimensional materials; periodic DFT; computational hydrogen electrode; reproducibility; GPAW
 
 ## 1. Introduction
 
-Nitrate-to-ammonia electroreduction is scientifically attractive because it couples removal of a widespread aqueous pollutant with production of a value-added nitrogen product [1] [2]. The reaction proceeds through a complex network of nitrogen–oxygen intermediates and proton-coupled electron-transfer steps, and selectivity may depend on both nitrogen-intermediate hydrogenation and competition from hydrogen evolution. Single-atom catalysts provide a useful model platform because site isolation, coordination environment, and support charge transfer can be varied systematically [3].
+Nitrate contamination is associated with agricultural runoff, wastewater, industrial streams, and other anthropogenic nitrogen sources. In water-treatment research, nitrate is commonly treated as a pollutant to be removed or converted into less harmful nitrogen products. A complementary approach is to recover the nitrogen in nitrate as ammonia, a useful chemical feedstock and potential energy carrier [1,2]. The attraction of this route is not that nitrate reduction is intrinsically simple, but that nitrate is a more chemically activated nitrogen source than dinitrogen. Nitrate is also considerably more soluble in aqueous electrolytes than N₂, which can be advantageous for an electrochemical process [3]. These benefits must nevertheless be assessed against the energy and material requirements of nitrate capture, electrolyte management, ammonia separation, and catalyst stability.
 
-Previous work has shown that isolated Fe sites can favour ammonia formation and suppress pathways requiring neighbouring metal atoms [1]. Other studies emphasise the role of adsorbed hydrogen and show that the balance between hydrogen generation and its consumption by nitrogen intermediates can control nitrate-reduction performance [2]. These observations motivate a matched comparison of support families and metal identities rather than a ranking based on a single adsorption energy.
+The nitrate-to-ammonia reaction is an eight-electron reduction. Its overall stoichiometry in acidic notation can be written as NO₃⁻ + 9H⁺ + 8e⁻ → NH₃ + 3H₂O, although the microscopic route depends on the electrode, pH, surface coverage, and interfacial potential. Candidate pathways may contain nitrate, nitrite, nitric oxide, hydroxylamine-like, nitrogen, and hydrogenated intermediates [1,3,4]. N–N coupling can lead to molecular nitrogen or other products, whereas progressive hydrogenation favours ammonia under appropriate conditions. The reaction therefore involves a competition between adsorption, oxygen removal, N–O bond cleavage, N–H bond formation, intermediate desorption, and hydrogen evolution. A catalyst that binds nitrate strongly is not necessarily selective for ammonia, and a catalyst that binds hydrogen at a thermodynamically favourable strength may either supply useful hydrogen equivalents or divert current towards H₂.
 
-A second motivation is methodological. The computational hydrogen electrode is useful for organising proton-coupled electron-transfer thermochemistry, but potential dependence of nitrate adsorption and dissociation may not be captured by assigning an integer potential slope to every step [5]. Likewise, implicit solvation is a screening approximation rather than a complete representation of a charged electrochemical interface. A defensible study must therefore report convergence, charge compensation, spin-state selection, solvation sensitivity, and the distinction between canonical and constant-potential calculations.
+Experimental studies have established that isolated metal sites can be effective for nitrate-to-ammonia chemistry. Wu and co-workers reported an Fe single-atom catalyst with high ammonia selectivity and used DFT to discuss elementary steps on isolated Fe sites [1]. Their mechanistic interpretation is important for the present project because it links atomically dispersed Fe to suppression of N–N coupling and identifies hydrogenated NO intermediates as energetically important. Fan and co-workers further emphasised the role of active hydrogen, showing that the production and consumption of hydrogen equivalents can influence nitrate-reduction kinetics and selectivity [2]. These studies motivate a workflow in which nitrate adsorption and H* adsorption are screened together rather than treating the nitrate molecule as the only relevant adsorbate.
 
-## 2. Methods
+Computational work has developed several levels of description for nitrate electroreduction. Liu and co-workers used DFT-based microkinetic modelling to connect adsorption descriptors, predicted rates, and selectivity trends across transition-metal surfaces [4]. Their analysis illustrates both the value and the danger of descriptor-based screening: oxygen and nitrogen adsorption can organise trends, but the conclusions depend on the elementary-step network, coverage assumptions, and kinetic parameters. Murphy and co-workers combined experiments and theory for atomically dispersed M–N–C systems and reported correlations involving nitrate and nitrite reduction, thereby highlighting the importance of treating nitrate-to-nitrite and nitrite-to-ammonia chemistry as a coupled cascade [3]. Predictive theoretical models have similarly shown that the identity of the rate-controlling or potential-determining step cannot be inferred from a single adsorption energy [5].
 
-### 2.1 Structural models
+Single-atom catalysts are attractive for mechanistic studies because their local coordination can be defined more clearly than the ensemble structure of a nanoparticle. Nitrogen, sulphur, carbon, phosphorus, and oxygen coordination can modify the oxidation state, orbital occupation, adsorption geometry, and stability of the metal centre [6,7]. Two-dimensional supports are especially convenient computational models because they provide extended periodic cells, exposed surfaces, and a controllable defect chemistry. Nitrogenated graphene and carbon-nitrogen frameworks can stabilise isolated transition-metal atoms through M–N coordination, while sulphur vacancies in MoS₂ can provide a chemically distinct anchoring environment. These systems should not, however, be treated as interchangeable. A nominally identical metal may occupy a substitutional, vacancy, hollow, bridge, or reconstructed site depending on the support, and the calculated energy of a metastable starting configuration is not a universal property of the element.
 
-Three support families were defined: nitrogenated graphene with a reproducible defect/anchor construction, 2H-MoS₂ with a sulphur-vacancy starting model, and a labelled g-C₃N₄-like periodic starting model. Ten metals were selected to span first-row non-precious candidates, platinum-group references, and a late noble-metal boundary. The nominal matrix contains 30 bare SAC models. These are starting structures for optimisation and are not presented as relaxed experimental structures.
+The methodological challenge is amplified at the electrochemical interface. The computational hydrogen electrode (CHE) provides a practical way of assigning proton–electron chemical potentials using the hydrogen electrode reference [13,14]. In its simplest form, the free-energy correction for a proton–electron pair is ΔG(U) = ΔG(0) − eU, with the exact sign depending on the potential convention. CHE is valuable for first-pass screening, but it does not automatically describe potential-dependent adsorption, electrode charging, interfacial electric fields, or the response of a charged nitrate species. Explicit or implicit solvation can modify adsorption geometries and energies, and grand-canonical or constant-potential methods may be needed when the surface charge changes materially along a reaction coordinate [10,11].
 
-### 2.2 Electronic-structure implementation
+The objective of this work is consequently methodological and translational. We establish an auditable framework for comparing 30 nominal SAC models while making the numerical assumptions visible. We then execute the subset of calculations that can be completed and inspected in the available environment. The study is intentionally structured so that unfinished or non-converged calculations cannot be silently promoted to activity rankings. This distinction is essential for a computational paper: a reproducible workflow and a valid benchmark are publishable forms of evidence, whereas an attractive but unsupported volcano plot is not.
 
-The open-source implementation uses GPAW 24.1.0 with ASE and the Ubuntu PAW dataset collection. Plane-wave calculations use PBE, explicit k-point meshes, spin polarisation where appropriate, and archived calculator logs. The workflow also provides VASP-compatible POSCAR/INCAR/KPOINTS packages, but VASP results are not reported because no licensed VASP executable or POTCAR library was available in the execution environment.
+## 2. Research design and model hierarchy
 
-### 2.3 Electrochemical thermochemistry
+### 2.1 Matched comparison matrix
 
-Adsorption energies are defined as $E_{ads}=E_{SAC+X}-E_{SAC}-E_X$ only when the reference states, charge, and electrostatic convention form a consistent thermodynamic cycle. CHE corrections use $\mu(H^+ + e^-;U)=\frac{1}{2}G(H_2)-eU$. Nitrate is charged, so its treatment requires an explicit statement of charge compensation and cannot be inferred from a neutral-molecule calculation. Constant-potential or grand-canonical checks are reserved for shortlisted states and the predicted potential-determining step.
+The nominal design contains three support families and ten metal identities. The metals were selected to span early and late transition-metal behaviour, common non-precious SAC candidates, platinum-group references, and a late noble-metal boundary. The support labels describe model families rather than claims about a unique experimentally established polymorph. In particular, the g-C₃N₄-like model is explicitly treated as a reproducible starting model, not as a complete representation of all g-C₃N₄ phases.
 
-### 2.4 Quality control
+| Support | Model shorthand | Metals | SACs | Question |
+|---|---|---|---:|---|
+| N-graphene | 4×4 sheet; N anchor | Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, Au | 10 | M–N coordination; nitrate/H competition |
+| MoS₂ vacancy | 4×4 2H-MoS₂; one S vacancy | Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, Au | 10 | Vacancy binding; adsorbate activation |
+| g-C₃N₄-like | 4×4 labelled C–N model | Fe, Co, Ni, Cu, Zn, Ru, Rh, Pd, Pt, Au | 10 | N-rich support comparison |
+| **Total** | **Matched starting matrix** | **10 metals** | **30** | **Support–metal and pathway sensitivity** |
 
-A structure passes the automated pre-calculation audit only if it has a finite periodic cell, at least 15 Å calculated vacuum after adsorbate placement, no atom contact below 0.7 Å, and valid periodicity. A calculation is accepted only when electronic and ionic convergence, spin-state checks, geometry inspection, and raw-output archiving are complete. Coarse diagnostics are labelled separately from accepted production results.
+The matched design is useful only if the models remain comparable. The same nominal in-plane replication, vacuum policy, functional family, spin protocol, and adsorption-energy convention should be used across the matrix. At the same time, the workflow must permit support-specific relaxation and magnetic states. The correct interpretation is therefore “matched computational design under explicitly stated model assumptions”, not “intrinsic universal ranking of metals”.
 
-## 3. Results and discussion
+### 2.2 Pristine and defect structures
 
-### 3.1 Reproducible structure set
+The structure generator produces a pristine support, a defect support where relevant, and a bare SAC starting configuration. A metal atom is initially placed above the support or near the intended vacancy/anchor environment. This placement is only a starting point for relaxation. It does not establish the final coordination number, oxidation state, or active site. A calculation that returns a migrated metal, a reconstructed defect, or a detached atom must be retained as chemical information rather than overwritten by the starting geometry.
 
-The workflow generated 36 periodic starting structures: three support/defect models and 30 metal–support models. A further 60 nitrate and hydrogen starting structures were generated for screening. After correcting the fractional translation construction and increasing the g-C₃N₄ cell height to preserve post-adsorbate vacuum, all 96 structures passed the automated geometry audit.
+The final generated inventory contains 36 VASP-format structures: three pristine/defect support pairs or support references and 30 metal-containing SAC structures. The models were read back using a direct VASP parser and assessed for finite cells, periodic boundary conditions, vacuum, and short contacts. An initial construction error in the g-C₃N₄-like model produced periodic duplicate sites because the basis translations were not divided consistently by the supercell size. A second issue arose when adsorbates reduced the effective vacuum. Both defects were corrected, and the regenerated inventory passed the automated audit.
 
-### 3.2 Periodic benchmark and convergence
+### 2.3 Nitrate and hydrogen starting structures
 
-The compact graphene benchmark included eleven calculations spanning cutoff, k-point, vacuum, and spin settings. The cutoff, k-point, and vacuum series showed substantial total-energy variation and were therefore assigned `REFINE` status. The non-spin-polarised and spin-polarised calculations for the closed-shell graphene benchmark were numerically indistinguishable within the provisional tolerance, but this does not validate the spin treatment of open-shell transition-metal SACs.
+For the first screening layer, nitrate and hydrogen were placed above the metal site. The nitrate geometry is a deliberately simple starting arrangement and is not a converged aqueous nitrate structure. Crucially, nitrate is an anion, so a neutral periodic calculation with a visually plausible NO₃ geometry cannot by itself provide a chemically complete nitrate adsorption free energy. The charge state, compensating background, electrostatic correction, solvation model, and reference chemical potential must be documented together. The 60 generated adsorbate structures are therefore input geometries, not adsorption results.
 
-![Convergence benchmark](../figures/final/convergence_benchmark.png)
+## 3. Computational methods and reproducibility controls
 
-### 3.3 Coarse SAC optimisation diagnostics
+### 3.1 Executed open-source route
 
-Fe@graphene and Fe@MoS₂ were subjected to coarse plane-wave optimisation diagnostics. Both runs completed without calculator failure, but neither reached the requested production force criterion under the five-step, 150 eV, Gamma-only diagnostic settings. Their raw outputs are retained to test the workflow and are excluded from activity rankings.
+The executable route used for the completed diagnostics is GPAW 24.1.0 with ASE. GPAW is open-source, while its PAW datasets and optional basis files are distributed separately. The working environment used the Ubuntu PAW dataset collection and a compatible NumPy 1.x/SciPy runtime because the packaged native GPAW extension was compiled against the NumPy 1.x ABI. The exact environment is recorded in `ENVIRONMENT.md`. VASP-compatible POSCAR, INCAR, KPOINTS, and POTCAR-manifest generation is provided, but no proprietary VASP executable or POTCAR library is distributed and no VASP calculation is claimed.
 
-## 4. Limitations and next stage
+For a publication-grade production campaign, the recommended hierarchy is a converged plane-wave calculation with a documented exchange–correlation functional, dispersion treatment, spin state, smearing, k-point mesh, slab size, vacuum, dipole correction, and electronic/ionic convergence criteria. Dispersion may be important for adsorbates and layered materials, but the present GPAW diagnostic runs were not promoted as a D3-corrected production dataset. This distinction is recorded because changing functional or dispersion settings can alter both geometry and reaction-energy ranking.
 
-The present manuscript reports a reproducibility and numerical-audit stage, not a completed catalyst-discovery claim. The full 30-model optimisations, converged adsorption energies, charged nitrate solvation corrections, transition states, CHE free-energy diagrams, stability analysis, selectivity analysis, and publication-grade ranking require a substantially larger computational allocation. The repository contains the structure generators, input policies, audit scripts, and data schemas required to execute that stage without changing the scientific definitions.
+### 3.2 Geometry optimisation and spin
 
-## 5. Conclusions
+Bare supports should be relaxed before defects and SACs are compared. The in-plane lattice parameters should be converged or fixed according to a declared protocol. For the SAC matrix, the in-plane cell should normally be held fixed after support convergence so that energy differences do not combine unrelated cell strain with chemistry. The out-of-plane vacuum must be tested after adsorbate placement, not only for the pristine sheet. Adsorbates, the metal, and the chemically active support atoms should be relaxed unless a frozen-layer test shows that constraints do not change the ranking.
 
-A traceable open-source periodic-DFT framework was established for matched SAC/support comparisons in nitrate-to-ammonia electroreduction. The structure set and pre-calculation audits are complete, GPAW execution has been verified, and the initial convergence study has identified unresolved numerical sensitivities. The central methodological conclusion is that no activity ranking should be reported until energy differences, spin states, vacuum, cutoff, k-point sampling, and charged-intermediate treatment are converged consistently across the complete model family.
+Transition metals require spin-polarised calculations. At minimum, plausible initial magnetic moments should be enumerated for Fe, Co, Ni, and any state that develops non-zero spin density. The lowest-energy converged state should be retained only after checking near-degenerate alternatives. A spin comparison on closed-shell graphene cannot validate the magnetic treatment of open-shell SACs. This is why the compact benchmark marks the graphene spin series as a limited pass rather than a general spin-validation result.
+
+### 3.3 Adsorption energies and thermochemistry
+
+For a consistently referenced neutral adsorption process, the electronic adsorption energy is
+
+$$
+E_{ads}=E_{SAC+X}-E_{SAC}-E_X.
+$$
+
+The equation is simple, but the reference is not. A gas-phase molecule, aqueous species, solvated ion, and CHE-derived chemical potential are different thermodynamic references. They must not be mixed. Zero-point and thermal corrections require vibrational calculations or a documented approximation. A localised-basis BSSE correction should not be transferred to a periodic plane-wave result. Adsorption energies should be reported with charge, spin, geometry, reference state, and numerical settings in the same record.
+
+For a proton–electron pair, the CHE convention adopted in the project is
+
+$$
+\mu(H^+ + e^-;U)=\tfrac{1}{2}G(H_2)-eU,
+$$
+
+where U is referenced consistently to the chosen hydrogen-electrode convention. The code utility treats the integer argument as the number of proton–electron pairs and returns an energy in eV when the input free energy is in eV. The utility is bookkeeping support, not a replacement for a complete electrochemical thermodynamic cycle.
+
+### 3.4 Solvation, potential, and transition states
+
+Nitrate reduction is an interfacial process. Implicit solvation can provide a useful screening correction, but its cavity definition, dielectric model, ionic strength, and treatment of charged surfaces must be specified. Constant-potential or grand-canonical calculations are especially relevant where adsorption or dissociation changes the surface charge [10,11]. Explicit water checks should be reserved for shortlisted intermediates and the potential-determining step when resources are limited.
+
+Transition-state calculations require more than a high point on a relaxed scan. A double-ended method, constrained scan, or equivalent strategy should generate a candidate path. A transition state should exhibit one relevant imaginary frequency and be connected to the intended reactant and product by downhill paths. The project protocol prioritises barriers that could change the candidate ranking rather than attempting an indiscriminate search over every possible rearrangement.
+
+## 4. Results of the audit and executed benchmark
+
+### 4.1 Structural inventory and quality control
+
+The regenerated structure set contains 36 bare structures and 60 adsorbate starting structures. The geometry audit checks finite cell lengths, periodic boundary conditions, at least 15 Å of effective vacuum after adsorbate placement, and no interatomic contact below 0.7 Å. All 36 bare structures passed, and all 60 nitrate/hydrogen structures passed after correcting the g-C₃N₄ cell-height and fractional-coordinate construction. These tests establish file and starting-geometry validity; they do not establish chemical stability or catalytic activity.
+
+| Artefact | Number | Audit | Interpretation |
+|---|---:|---|---|
+| Support references | 6 | 0 failures | Valid starting cells |
+| Bare SAC inputs | 30 | 0 failures | Starting configurations; not relaxed results |
+| SAC + H inputs | 30 | 0 failures | Adsorption inputs; charge treatment required |
+| SAC + NO₃ inputs | 30 | 0 failures | Adsorption inputs; nitrate is charged |
+| **Total** | **96** | **0 geometric failures** | **Complete traceable input inventory** |
+
+### 4.2 GPAW execution verification
+
+A periodic graphene smoke test completed successfully, producing a GPAW log, optimiser log, final `.gpw` file, VASP-format final geometry, and summary record. This test demonstrates that the calculator, PAW datasets, numerical libraries, and periodic boundary conditions can work together. It does not validate the chosen production cutoff, k-point mesh, dispersion model, magnetic states, charged species, or transition-metal basis across the 30-model matrix.
+
+The run-status parser identified four archived optimisation runs. One earlier Fe@graphene LCAO diagnostic was marked converged by its optimiser under the then-used diagnostic settings, whereas later plane-wave Fe@graphene and Fe@MoS₂ runs did not meet the declared diagnostic stopping criterion. These records are intentionally not merged because they used different calculator modes and settings. The ledger therefore classifies them as either `PASS` for the specific optimiser run or `DIAGNOSTIC_ONLY`, never as a single comparable activity dataset.
+
+### 4.3 Compact convergence benchmark
+
+The benchmark comprised eleven calculations on a compact pristine graphene model. Cutoffs of 150, 250, and 350 eV were tested, as were 1 × 1 × 1, 2 × 2 × 1, and 3 × 3 × 1 k-point meshes, vacuum heights of 10, 15, and 20 Å, and spin-polarised versus non-spin-polarised settings. The absolute total energies are listed below.
+
+| Family | Setting | Cutoff | k-mesh | Vacuum | Spin | Energy (eV) | QC |
+|---|---:|---:|---|---:|---|---:|---|
+| Cutoff | 150 | 150 | 1×1×1 | 12 | No | -9.954667 | REFINE |
+| Cutoff | 250 | 250 | 1×1×1 | 12 | No | -52.554961 | REFINE |
+| Cutoff | 350 | 350 | 1×1×1 | 12 | No | -63.439445 | REFINE |
+| k-point mesh | 1×1×1 | 250 | 1×1×1 | 12 | No | -52.554961 | REFINE |
+| k-point mesh | 2×2×1 | 250 | 2×2×1 | 12 | No | -61.136437 | REFINE |
+| k-point mesh | 3×3×1 | 250 | 3×3×1 | 12 | No | -60.934674 | REFINE |
+| Vacuum | 10 | 250 | 1×1×1 | 10 | No | -52.091381 | REFINE |
+| Vacuum | 15 | 250 | 1×1×1 | 15 | No | -52.384033 | REFINE |
+| Vacuum | 20 | 250 | 1×1×1 | 20 | No | -52.130281 | REFINE |
+| Spin | False | 250 | 1×1×1 | 15 | No | -52.384033 | PASS* |
+| Spin | True | 250 | 1×1×1 | 15 | Yes | -52.384033 | PASS* |
+
+*Limited pass for the closed-shell graphene benchmark only; it does not validate open-shell SAC spin states.
+
+![Figure 1. Compact periodic graphene convergence benchmark](figures/final/convergence_benchmark.png)
+
+**Figure 1.** Total-energy sensitivity to cutoff, k-point mesh, and vacuum in the compact graphene benchmark. The figure is a diagnostic representation of the data above. The large changes in absolute energy between cutoff and k-point settings show why a production protocol cannot be selected from an unvalidated single setting.
+
+There is an important methodological nuance in interpreting this table. Absolute total energies from different cutoffs, k-point meshes, or cell heights are not directly interchangeable as catalytic observables. They are useful here as a diagnostic of numerical sensitivity because the benchmark changes one nominal variable at a time, but the production criterion must be defined on energy differences such as adsorption energies and reaction-step free energies. In particular, a support-size and k-point convergence study should compare the same chemical process at each setting. A converged total energy for pristine graphene would not prove convergence of nitrate adsorption on a transition-metal defect.
+
+### 4.4 Coarse Fe-SAC optimisations
+
+Two coarse plane-wave optimisations were executed for Fe@graphene and Fe@MoS₂. The calculations used a 150 eV cutoff, Gamma-only sampling, five ionic steps, and a 0.50 eV Å⁻¹ diagnostic force target. The Fe@graphene run reached an optimiser convergence flag in one archived mode, while a subsequent plane-wave diagnostic remained non-converged after five steps. The Fe@MoS₂ plane-wave diagnostic also remained non-converged. Because the runs differ in calculator mode and did not satisfy the production protocol, they are retained as execution diagnostics rather than converted into formation or adsorption energies.
+
+| Run | Mode | Setting | k-mesh | Steps | Status | Use |
+|---|---|---|---|---:|---|---|
+| Fe@graphene | LCAO diagnostic | dzp-labelled | 1×1×1 | 12 | Converged under its criterion | Diagnostic only |
+| Fe@graphene | Plane-wave | 150 eV | 1×1×1 | 5 | Not converged | Diagnostic only |
+| Fe@MoS₂ | Plane-wave | 150 eV | 1×1×1 | 5 | Not converged | Diagnostic only |
+
+## 5. Scientific interpretation and implications
+
+The most important result is negative but useful: the first compact benchmark does not support selecting final production settings. The cutoff series changes the total energy by tens of electron-volts, the k-point series changes the total energy by several electron-volts, and the vacuum series changes it by a few tenths of an electron-volt. These numbers should not be interpreted as adsorption errors; they are warnings that the numerical setup, code mode, or dataset convention requires deeper inspection before the full SAC matrix is ranked. The correct response is refinement, not post hoc selection of the most visually appealing data point.
+
+The strong numerical sensitivity also demonstrates why a Q1-level study should use a convergence matrix tailored to the actual observables. For each support family, the next stage should test slab size, cutoff, k-point sampling, vacuum, smearing, and spin state on a representative bare SAC and on at least one nitrate and one hydrogen adsorbate. The acceptance threshold should be stated in terms of adsorption or reaction-energy changes, for example a target of no more than a declared small energy difference between the final two settings. Geometry and force convergence must be assessed separately from energy convergence.
+
+The support comparison has a similar caveat. Nitrogenated graphene, MoS₂ with a sulphur vacancy, and a g-C₃N₄-like model are chemically diverse. A stronger study would define the site stoichiometry, defect formation energy, metal binding energy, possible competing metal aggregation, and support reconstruction. Stability should be assessed under relevant chemical potentials, not only by a single isolated-atom binding energy. For example, a strongly negative metal-binding energy relative to a gas-phase atom does not by itself establish resistance to clustering or dissolution. The stability hierarchy should include metal aggregation tests, vacancy formation, alternative coordination motifs, and, where possible, comparison with experimental structural evidence [6–9].
+
+The nitrate/H* competition should also be treated as a mechanistic hypothesis rather than a universal descriptor. Nitrate and H* may occupy different sites, and the relevant competition can depend on solvent, pH, electric field, coverage, and local oxidation state. Microkinetic analysis is valuable because it can translate elementary-step free energies into rates and selectivity, but it requires a defensible reaction network and coverage model [4,5]. A plot of nitrate adsorption energy against H adsorption energy without a kinetic model would be a useful exploratory figure, not proof of ammonia selectivity.
+
+The charged nature of nitrate is a central limitation. In periodic DFT, a charged cell is normally treated with a compensating background or an equivalent electrostatic convention. This can be acceptable for some comparative calculations, but the correction and reference must be specified. Solvation and interfacial fields can strongly influence a charged adsorbate. The workflow therefore prohibits comparing an uncorrected neutral nitrate calculation with a neutral gas-phase reference and calling the difference an aqueous adsorption free energy. A publication-grade pathway would require at least an implicit-solvation sensitivity analysis and a higher-level check for the shortlisted catalyst and potential-determining step [10,11].
+
+The same caution applies to constant-potential effects. CHE assigns a linear potential dependence to proton–electron transfer steps, but nitrate adsorption or dissociation may not have a simple integer slope. Grand-canonical studies show that potential-dependent surface charge can change adsorption and dissociation energetics [10]. The present work therefore treats CHE as a transparent first-pass framework and reserves constant-potential or grand-canonical validation for states that control the ranking. This approach is more defensible than claiming that one electrochemical model is universally sufficient.
+
+## 6. Reproducibility and data availability
+
+The repository is designed to make the distinction between inputs, diagnostics, accepted results, and pending calculations machine-readable. `data/calculation_templates.csv` defines empty schemas for adsorption, reaction, descriptors, stability, and selectivity outputs. `data/parsed_run_status.csv` records the current archived optimisation runs. `data/geometry_audit.txt` and `data/adsorbate_geometry_audit.txt` record structure checks. The generator and parser scripts are retained so that the structure inventory and audit can be regenerated rather than manually copied.
+
+The project also preserves VASP-compatible input-generation logic without distributing proprietary VASP potentials. This is important for licensing and reproducibility. A future VASP campaign should add the executable version, PAW potential release, INCAR, KPOINTS, POSCAR, POTCAR checksum or licensed archive identifier, OUTCAR, vasprun.xml, CONTCAR, and a calculation manifest. A future GPAW campaign should add the GPAW version, dataset path and hashes, Python environment, calculator parameters, `.gpw` files, optimiser logs, and analysis scripts. A data repository should expose raw and processed data separately so that processed figures can be traced back to raw outputs.
+
+The manuscript and supporting information also follow the main compliance principles identified from current publisher guidance. The manuscript uses standard sections, embeds the central figure near its discussion, supplies separate supporting information, reports the actual computational implementation, and avoids claiming unexecuted calculations. The remaining publication hurdle is scientific completeness, not simply formatting. Journals in this area require a meaningful advance supported by technically valid data, and no amount of reference-count expansion can substitute for converged calculations.
+
+## 7. Limitations and required production campaign
+
+The current work is limited by computational resources and by the absence of a completed solvation-aware electrochemical campaign. The available sandbox has six CPUs and approximately 3.8 GiB RAM. The largest starting model contains roughly 129 atoms before adsorbates, and a 30-model spin-polarised plane-wave optimisation matrix would require substantially more CPU time and memory than the compact diagnostics. The coarse runs show that the calculations are executable in principle but not yet suitable for a high-throughput production campaign in this environment.
+
+The production campaign should proceed in the following order. First, converge the pristine supports and defect structures, including in-plane cell treatment, slab size, vacuum, cutoff, k-points, smearing, and spin. Secondly, optimise all 30 bare SACs with multiple magnetic initialisations and preserve every raw output. Thirdly, calculate nitrate and H* adsorption with consistent charge and solvation conventions. Fourthly, shortlist candidates using stability, adsorption, and competing-HER criteria rather than nitrate adsorption alone. Fifthly, optimise the complete nitrate-to-ammonia pathway for the shortlist, including nitrate-to-nitrite, nitrite-to-NO, N–O cleavage, hydrogenation, and ammonia release as chemically appropriate. Sixthly, validate the potential-determining step with a higher-level electrochemical treatment and report uncertainty from numerical settings, spin states, solvation, and structural alternatives.
+
+The production paper should contain a model-inventory table, convergence table, stability table, adsorption-energy table, pathway free-energy table, spin-state table, and data-availability statement. Figures should include representative structures, convergence plots, adsorption-energy or descriptor maps only after valid data exist, free-energy diagrams for shortlisted systems, and a clear workflow diagram. Every table entry should carry a calculation identifier. Every figure should be regenerable from machine-readable data. If a candidate fails convergence or changes identity through reconstruction, that result should remain visible in the supporting information.
+
+## 8. Conclusions
+
+An auditable open-source periodic-DFT framework was established for matched comparisons of isolated metal sites on two-dimensional supports in nitrate-to-ammonia electroreduction. The project generated 36 bare starting structures and 60 nitrate/hydrogen starting structures, corrected and documented construction errors, verified GPAW execution, archived raw diagnostics, and executed a compact numerical benchmark. All generated structures passed the geometric audit. The benchmark showed unresolved sensitivity to cutoff, k-point sampling, and vacuum, so no catalyst ranking was reported. A closed-shell graphene spin comparison was stable but cannot validate the magnetic treatment of open-shell transition-metal SACs. Two coarse Fe-SAC optimisations were archived as diagnostic execution records and were not promoted to production results.
+
+The work therefore provides a scientifically honest reproducibility baseline and a clear route to a full research article. The central conclusion is that the 30-model activity and selectivity study must not be presented as complete until the relevant energy differences, structures, spin states, charged-intermediate treatment, solvation, and potential dependence have been converged and archived. The repository is prepared for that campaign, but the present evidence supports a benchmark and workflow manuscript rather than a completed claim of a best nitrate-reduction catalyst.
 
 ## References
 
-[1]: https://doi.org/10.1038/s41467-021-23115-x "Electrochemical ammonia synthesis via nitrate reduction on Fe single atom catalyst"
-[2]: https://doi.org/10.1038/s41467-022-35664-w "Active hydrogen boosts electrochemical nitrate reduction to ammonia"
-[3]: https://doi.org/10.1002/smll.202403515 "Single Atom Catalyst for Nitrate-to-Ammonia Electrochemistry"
-[4]: https://doi.org/10.1021/acs.jpclett.1c00855 "Theoretical Exploration of Electrochemical Nitrate Reduction Reaction Activities on Transition-Metal-Doped h-BP"
-[5]: https://doi.org/10.1038/s42004-025-01579-y "A grand canonical study of the potential dependence of nitrate adsorption and dissociation across metals and dilute alloys"
+[1] Wu Z.-Y.; Karamad M.; Yong X.; Huang Q.; Cullen D. A.; Zhu P.; Xia C.; Xiao Q.; Shakouri M.; Chen F.-Y.; Kim J. Y. T.; Xia Y.; Heck K.; Hu Y.; Wong M. S.; Li Q.; Gates I.; Siahrostami S.; Wang H. *Electrochemical ammonia synthesis via nitrate reduction on Fe single atom catalyst*. **Nature Communications** (2021). https://doi.org/10.1038/s41467-021-23115-x
+
+[2] Fan X.; Johnson N.; et al. *Active hydrogen boosts electrochemical nitrate reduction to ammonia*. **Nature Communications** (2022). https://doi.org/10.1038/s41467-022-35664-w
+
+[3] Murphy E.; Liu Y.; Matanovic I.; Rüscher M.; Huang Y.; Ly A.; Guo S.; Zang W.; Yan X.; Martini A.; Timoshenko J.; Roldán Cuenya B.; Zenyuk I. V.; Pan X.; Spoerke E. D.; Atanassov P. *Elucidating electrochemical nitrate and nitrite reduction over atomically-dispersed transition metal sites*. **Nature Communications** (2023). https://doi.org/10.1038/s41467-023-40174-4
+
+[4] Liu J.-X.; Richards D.; Singh N.; Goldsmith B. R. *Activity and Selectivity Trends in Electrocatalytic Nitrate Reduction on Transition Metals*. **ACS Catalysis** (2019). https://doi.org/10.1021/acscatal.9b02179
+
+[5] Mou T.; Wang Y.; Deák P.; Li H. *Predictive Theoretical Model for the Selective Electroreduction of Nitrate to Ammonia*. **The Journal of Physical Chemistry Letters** (2022). https://doi.org/10.1021/acs.jpclett.2c02452
+
+[6] Subhadarshini S.; Pumera M. *Single Atom Catalyst for Nitrate-to-Ammonia Electrochemistry*. **Small** (2024). https://doi.org/10.1002/smll.202403515
+
+[7] Yuan H.; Li Z.; Zeng X. C.; Yang J. *Descriptor-Based Design Principle for Two-Dimensional Single-Atom Catalysts: Carbon Dioxide Electroreduction*. **The Journal of Physical Chemistry Letters** (2020). https://doi.org/10.1021/acs.jpclett.0c00676
+
+[8] Gusmão R.; et al. *Recent Developments on the Single Atom Supported at 2D Materials Beyond Graphene as Catalysts*. **ACS Catalysis** (2020). https://doi.org/10.1021/acscatal.0c02388
+
+[9] *Surface coordination chemistry on graphene and two-dimensional carbon materials for well-defined single atom supported catalysts*. **Advances in Organometallic Chemistry** (2019). https://doi.org/10.1016/bs.adomc.2019.01.002
+
+[10] Sweeney M.; Tran K.; Goldsmith B. R. *A grand canonical study of the potential dependence of nitrate adsorption and dissociation across metals and dilute alloys*. **Communications Chemistry** (2025). https://doi.org/10.1038/s42004-025-01579-y
+
+[11] Van den Bossche M.; Skúlason E.; Rose-Petruck C.; Jónsson H. *Assessment of Constant-Potential Implicit Solvation Calculations of Electrochemical Energy Barriers for H₂ Evolution on Pt*. **The Journal of Physical Chemistry C** (2019). https://doi.org/10.1021/acs.jpcc.8b10046
+
+[12] Abidin A. F. Z.; Hamada I. *Oxygen Reduction Reaction on Single-Atom Catalysts From Density Functional Theory Calculations Combined with an Implicit Solvation Model*. **The Journal of Physical Chemistry C** (2023). https://doi.org/10.1021/acs.jpcc.3c02224
+
+[13] Nørskov J. K.; Rossmeisl J.; Logadottir A.; Lindqvist L.; Kitchin J. R.; Bligaard T.; Jónsson H. *Origin of the Overpotential for Oxygen Reduction at a Fuel-Cell Cathode*. **The Journal of Physical Chemistry B** (2004). https://doi.org/10.1021/jp047349j
+
+[14] Nørskov J. K.; Bligaard T.; Rossmeisl J.; Christensen C. H. *Towards the computational design of solid catalysts*. **Nature Chemistry** (2009). https://doi.org/10.1038/nchem.121
+
+[15] García-Ratés M.; López N. *Multigrid-Based Methodology for Implicit Solvation Models in Periodic DFT*. **Journal of Chemical Theory and Computation** (2016). https://doi.org/10.1021/acs.jctc.5b00949
+
+[16] Priyadarsini A.; Kattel S. *New Insights into the Electrochemical Nitrate Reduction Reaction on Cu(111) from Theoretical Calculations*. **The Journal of Physical Chemistry C** (2025). https://doi.org/10.1021/acs.jpcc.5c02461
+
+[17] Tong X.; Zhang Z.; Fang Z.; Guo J. *PdMoCu Trimetallenes for Nitrate Electroreduction to Ammonia*. **The Journal of Physical Chemistry C** (2023). https://doi.org/10.1021/acs.jpcc.3c00785
+
+[18] Jia Y.; Ji Y.-G.; Xue Q.; Li F.-M. *Efficient Nitrate-to-Ammonia Electroreduction at Cobalt Phosphide Nanoshuttles*. **ACS Applied Materials & Interfaces** (2021). https://doi.org/10.1021/acsami.1c12512
+
+[19] Liu M.; Mao Q.; Shi K.; Wang Z. *Electroreduction of Nitrate to Ammonia on Palladium–Cobalt–Oxygen Nanowire Arrays*. **ACS Applied Materials & Interfaces** (2022). https://doi.org/10.1021/acsami.1c19412
+
+[20] Zhang G.; Wang G.; Wan Y.; Liu X. *Ampere-Level Nitrate Electroreduction to Ammonia over Monodispersed Bi-Doped FeS₂*. **ACS Nano** (2023). https://doi.org/10.1021/acsnano.3c05946
+
+[21] Zhou X.; Xu W.; Liang Y.; Jiang H. *Dynamically Restructuring Nanoporous Cu–Co Electrocatalyst for Efficient Nitrate Electroreduction to Ammonia*. **ACS Catalysis** (2024). https://doi.org/10.1021/acscatal.4c03336
+
+[22] Yin H.; Peng Y.; Li J. *Electrocatalytic Reduction of Nitrate to Ammonia via a Au/Cu Single Atom Alloy Catalyst*. **Environmental Science & Technology** (2023). https://doi.org/10.1021/acs.est.2c07968
+
+[23] Long X.; Huang F.; Zhong T.; Zhao H. *One-Step Strategy to Maximize Single-Atom Catalyst Utilization in Nitrate Reduction via Bidirectional Optimization of Mass Transfer and Electron Supply*. **Environmental Science & Technology** (2025). https://doi.org/10.1021/acs.est.4c14011
+
+[24] Liu Z.; Sun Y.-F.; Wang Y.-S.; Zhang W. *Optimal Solution for Modeling Electrocatalysis on Two-Dimensional Single-Atom Catalysts with Grand Canonical DFT*. **ACS Catalysis** (2025). https://doi.org/10.1021/acscatal.5c00199
+
+[25] Zhang X.; et al. *Theoretical Insights into Electrocatalytic Reduction of Nitrates to Ammonia on g-C₂N Monolayer-Supported Single Nonmetal Atoms*. **The Journal of Physical Chemistry A** (2026). https://doi.org/10.1021/acs.jpca.5c07719

@@ -1,0 +1,30 @@
+validated 29 references
+200 10.1038/s41467-021-23115-x 2021 Nature Communications Electrochemical ammonia synthesis via nitrate reduction on Fe single atom catalyst
+200 10.1038/s41467-022-35664-w 2022 Nature Communications Active hydrogen boosts electrochemical nitrate reduction to ammonia
+200 10.1002/smll.202403515 2024 Small Single Atom Catalyst for Nitrate‐to‐Ammonia Electrochemistry
+200 10.1039/D6CC02642G 2026 Chemical Communications Electrocatalytic nitrate reduction to ammonia: bimetallic-site catalysts, mechanistic insights, and performance optimization
+200 10.1021/acs.jpclett.1c00855 2021 The Journal of Physical Chemistry Letters Theoretical Exploration of Electrochemical Nitrate Reduction Reaction Activities on Transition-Metal-Doped <i>h</i>-BP
+200 10.1021/acs.jpca.5c07719 2026 The Journal of Physical Chemistry A Theoretical Insights into Electrocatalytic Reduction of Nitrates to Ammonia on g-C                     <sub>2</sub>                     N Monolayer-Supported Single Nonmetal Atoms
+200 10.1038/s42004-025-01579-y 2025 Communications Chemistry A grand canonical study of the potential dependence of nitrate adsorption and dissociation across metals and dilute alloys
+200 10.1021/acs.jpcc.3c02224 2023 The Journal of Physical Chemistry C Oxygen Reduction Reaction on Single-Atom Catalysts From Density Functional Theory Calculations Combined with an Implicit Solvation Model
+200 10.1021/acs.jpcc.5c02461 2025 The Journal of Physical Chemistry C New Insights into the Electrochemical Nitrate Reduction Reaction on Cu(111) from Theoretical Calculations
+200 10.1038/s41467-023-40174-4 2023 Nature Communications Elucidating electrochemical nitrate and nitrite reduction over atomically-dispersed transition metal sites
+200 10.1021/acscatal.9b02179 2019 ACS Catalysis Activity and Selectivity Trends in Electrocatalytic Nitrate Reduction on Transition Metals
+200 10.1021/acs.jpcc.3c00785 2023 The Journal of Physical Chemistry C PdMoCu Trimetallenes for Nitrate Electroreduction to Ammonia
+200 10.1021/acsami.1c12512 2021 ACS Applied Materials &amp; Interfaces Efficient Nitrate-to-Ammonia Electroreduction at Cobalt Phosphide Nanoshuttles
+200 10.1021/acsami.1c19412 2022 ACS Applied Materials &amp; Interfaces Electroreduction of Nitrate to Ammonia on Palladium–Cobalt–Oxygen Nanowire Arrays
+200 10.1021/acsnano.3c05946 2023 ACS Nano Ampere-Level Nitrate Electroreduction to Ammonia over Monodispersed Bi-Doped FeS                     <sub>2</sub>
+200 10.1021/acs.jpclett.2c02452 2022 The Journal of Physical Chemistry Letters Predictive Theoretical Model for the Selective Electroreduction of Nitrate to Ammonia
+200 10.1021/acscatal.4c03336 2024 ACS Catalysis Dynamically Restructuring Nanoporous Cu–Co Electrocatalyst for Efficient Nitrate Electroreduction to Ammonia
+200 10.1021/acs.est.2c07968 2023 Environmental Science &amp; Technology Electrocatalytic Reduction of Nitrate to Ammonia via a Au/Cu Single Atom Alloy Catalyst
+200 10.1021/jacs.6c00705 2026 Journal of the American Chemical Society Operando Cu Aggregation-Induced Spin State Modulation in Fe–Cu Single Atom Catalyst for Enhanced Tandem Electrochemical Nitrate Reduction Reaction
+200 10.1021/acs.est.4c14011 2025 Environmental Science &amp; Technology One-Step Strategy to Maximize Single-Atom Catalyst Utilization in Nitrate Reduction via Bidirectional Optimization of Mass Transfer and Electron Supply
+200 10.1021/acsestengg.5c00749 2025 ACS ES&amp;T Engineering Transition-Metal Single-Atom Alloy Electrocatalysts for Nitrate Reduction
+200 10.1021/acs.jctc.5b00949 2016 Journal of Chemical Theory and Computation Multigrid-Based Methodology for Implicit Solvation Models in Periodic DFT
+200 10.1021/acs.jpcc.8b10046 2019 The Journal of Physical Chemistry C Assessment of Constant-Potential Implicit Solvation Calculations of Electrochemical Energy Barriers for H                     <sub>2</sub>                     Evolution on Pt
+200 10.1021/acs.jpclett.0c00676 2020 The Journal of Physical Chemistry Letters Descriptor-Based Design Principle for Two-Dimensional Single-Atom Catalysts: Carbon Dioxide Electroreduction
+200 10.1021/acscatal.5c00199 2025 ACS Catalysis Optimal Solution for Modeling Electrocatalysis on Two-Dimensional Single-Atom Catalysts with Grand Canonical DFT
+200 10.1016/bs.adomc.2019.01.002 2019 Advances in Organometallic Chemistry Surface coordination chemistry on graphene and two-dimensional carbon materials for well-defined single atom supported catalysts
+200 10.1038/nchem.121 2009 Nature Chemistry Towards the computational design of solid catalysts
+200 10.1021/jp047349j 2004 The Journal of Physical Chemistry B Origin of the Overpotential for Oxygen Reduction at a Fuel-Cell Cathode
+200 10.1021/acscatal.0c02388 2020 ACS Catalysis Recent Developments on the Single Atom Supported at 2D Materials Beyond Graphene as Catalysts

@@ -1,5 +1,11 @@
 # Project Status
 
+## Second-pass audit status (27 August 2026)
+
+The repository and manuscript have undergone a second independent audit covering structures, geometry records, convergence data, run ledgers, chemistry utilities, VASP input generation, citations, tables, figures, equations, manuscript claims, and PDF rendering. The revised manuscript contains 5,299 words, 25 DOI-validated references, four embedded tables, and the real-data convergence figure. The LaTeX source compiles with XeLaTeX to a 17-page PDF with no fatal errors or missing figures. A detailed record is provided in `comprehensive_audit_report.md`.
+
+The package passes as a reproducibility-stage benchmark/workflow manuscript. It does not pass as a completed 30-catalyst activity/selectivity study because the production DFT matrix, charged nitrate/solvation calculations, transition states, free-energy pathway, and catalyst ranking remain unexecuted. These are explicitly marked as pending rather than represented by fabricated values.
+
 ## Verified completed work
 
 The open-source route is GPAW 24.1.0 with ASE, Ubuntu PAW datasets, and a NumPy/SciPy-compatible isolated runtime. A periodic graphene smoke calculation completed successfully. Three support families were generated: nitrogenated graphene, a 2H-MoS₂ sulphur-vacancy model, and a labelled g-C₃N₄-like starting model. The repository contains 36 audited pristine/defect/bare-SAC structures and 60 audited nitrate/hydrogen starting geometries.
