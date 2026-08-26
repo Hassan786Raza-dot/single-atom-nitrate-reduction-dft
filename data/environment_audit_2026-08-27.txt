@@ -1,0 +1,15 @@
+Executables
+vasp_std: unavailable
+vasp_gam: unavailable
+vasp_ncl: unavailable
+pw.x: unavailable
+cp2k: unavailable
+orca: unavailable
+xtb: unavailable
+Python packages
+ase: 3.29.0
+pymatgen: unavailable
+numpy: 2.5.1
+pandas: 3.0.5
+scipy: 1.18.1
+matplotlib: 3.11.1
