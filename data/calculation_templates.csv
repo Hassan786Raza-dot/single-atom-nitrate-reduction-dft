@@ -1,0 +1,6 @@
+table,required_columns,units,acceptance_rule
+adsorption_energies,"record_type,calculation_id,sac_id,adsorbate,E_complex,E_sac,E_ads,solvation_correction,ZPE_correction,thermal_correction,G_ads,method_label,audit_status","energies: eV", "No derived G_ads without archived component energies"
+reaction_mechanism,"record_type,calculation_id,sac_id,step,initial_state,final_state,delta_E,delta_G,barrier,proton_electron_pairs,PDS_flag,method_label,audit_status","energies: eV", "Barrier requires validated TS or explicit NR"
+descriptors,"record_type,calculation_id,sac_id,metal_charge,d_band_center,binding_energy,coordination_number,work_function,limiting_potential,method_label,audit_status","energies: eV; work function: eV", "Descriptor provenance must identify charge/PDOS method"
+stability_analysis,"record_type,calculation_id,sac_id,metal,dissolution_metric,aggregation_energy,minimum_binding_energy,stability_flag,method_label,audit_status","energies: eV", "Stability flag requires defined reference states"
+selectivity_analysis,"record_type,calculation_id,sac_id,nh3_pathway_free_energy,her_free_energy,nitrite_pathway_free_energy,selectivity_metric,method_label,audit_status","energies: eV", "Selectivity metric requires matched conditions"
