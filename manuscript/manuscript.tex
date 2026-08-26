@@ -641,12 +641,13 @@ built on unvalidated rankings.
 \subsection{6. Study strengths and
 limitations}\label{study-strengths-and-limitations}}
 
-The principal strength of this study is its separation of evidence
-classes. The structure generator, geometry audit, convergence benchmark,
-run-status parser, and claim-to-evidence matrix make it difficult to
-confuse a valid input with an accepted chemical result. This is
-particularly important for nitrate reduction because the literature
-spans extended metal surfaces, atomically dispersed sites,
+The repair classification for the principal limitations is summarised in
+Table 5. The principal strength of this study is its separation of
+evidence classes. The structure generator, geometry audit, convergence
+benchmark, run-status parser, and claim-to-evidence matrix make it
+difficult to confuse a valid input with an accepted chemical result.
+This is particularly important for nitrate reduction because the
+literature spans extended metal surfaces, atomically dispersed sites,
 experimentally reconstructed catalysts, and different electrochemical
 reference models {[}1{]} {[}3{]} {[}4{]} {[}5{]}. The workflow therefore
 offers a practical safeguard against transferring a descriptor or
@@ -669,6 +670,41 @@ not a new catalyst identity. The study contributes a reproducible gate
 system that quantifies whether a proposed nitrate-SAC screen is ready to
 support scientific interpretation. It does not claim a superior metal, a
 new reaction mechanism, or a new activity descriptor.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Limitation class
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Current status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Scientific remedy
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Repairable presentation and provenance & Abstract citations, grouped
+citations, missing cross-references, and dense tables corrected &
+Maintain automated citation, cross-reference, source-data, and rendering
+audits \\
+Analysis-repairable interpretation & Absolute-energy convergence and
+mixed calculator diagnostics retained as diagnostic evidence & Report
+them only as numerical-sensitivity evidence and never as catalytic
+ranking data \\
+Calculation-blocked chemistry & No accepted 30-SAC adsorption,
+solvation, potential, pathway, stability, or uncertainty dataset &
+Execute the production campaign with converged chemical observables,
+magnetic-state sampling, charged-species treatment, solvation, and
+stability checks \\
+\end{longtable}
+
+\textbf{Table 5.} Limitation classification and repair pathway. The
+table is a synthesis of the archived project audit and does not
+introduce unexecuted numerical results.
 
 \hypertarget{future-production-recommendations}{%
 \subsection{7. Future production

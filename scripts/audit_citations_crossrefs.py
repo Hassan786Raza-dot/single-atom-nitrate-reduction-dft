@@ -36,7 +36,9 @@ assert not uncited, uncited
 assert not missing, missing
 assert refs == set(range(1,len(refs)+1)), sorted(refs)
 assert figure_mentions >= 1
-assert table_mentions >= 3
+assert table_mentions >= 5
+for label in ['Table 1','Table 2','Table 3','Table 4','Table 5']:
+    assert label in main, label
 assert equation_mentions >= 1
 assert si_mentions >= 1
 print('CITATION_CROSSREF_AUDIT_PASS')

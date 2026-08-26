@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.26)  26 AUG 2026 21:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.26)  26 AUG 2026 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1148,224 +1148,223 @@ Underfull \hbox (badness 2221) in paragraph at lines 620--629
 s, competing
  []
 
-[11]
-Underfull \hbox (badness 1629) in paragraph at lines 685--695
+[11] [12]
+Underfull \hbox (badness 1629) in paragraph at lines 721--731
 \TU/DejaVuSerif(0)/m/n/10 dependent or grand-canonical calculations alter the s
 hortlisted
  []
 
-[12]
-Underfull \hbox (badness 2027) in paragraph at lines 734--744
+[13]
+Underfull \hbox (badness 2027) in paragraph at lines 770--780
 \TU/DejaVuSerif(0)/m/n/10 tion confirmed executable electronic-structure capabi
 lity. The
  []
 
-[13]
 
 LaTeX Font Warning: Font shape `TU/DejaVuSerif(0)/m/it' undefined
-(Font)              using `TU/DejaVuSerif(0)/m/n' instead on input line 763.
+(Font)              using `TU/DejaVuSerif(0)/m/n' instead on input line 799.
 
 LaTeX Font Info:    Font shape `TU/DejaVuSerif(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 767.
-
-Underfull \hbox (badness 5316) in paragraph at lines 777--781
+(Font)              scaled to size 10.0pt on input line 803.
+[14]
+Underfull \hbox (badness 5316) in paragraph at lines 813--817
 []\TU/DejaVuSerif(0)/m/it/10 [4] Liu J.-X.; Richards D.; Singh N.; Goldsmith B.
  R. Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--781
+Underfull \hbox (badness 10000) in paragraph at lines 813--817
 \TU/DejaVuSerif(0)/m/it/10 tivity and Selectivity Trends in Electrocatalytic Ni
 trate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 777--781
+Underfull \hbox (badness 10000) in paragraph at lines 813--817
 \TU/DejaVuSerif(0)/m/it/10 Reduction on Transition Metals. \TU/DejaVuSerif(0)/b
 /n/10 ACS Catalysis \TU/DejaVuSerif(0)/m/it/10 (2019).
  []
 
 
-Underfull \hbox (badness 5490) in paragraph at lines 782--786
+Underfull \hbox (badness 5490) in paragraph at lines 818--822
 []\TU/DejaVuSerif(0)/m/it/10 [5] Mou T.; Wang Y.; Deák P.; Li H. Predictive The
 oreti-
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 782--786
+Underfull \hbox (badness 1142) in paragraph at lines 818--822
 \TU/DejaVuSerif(0)/m/it/10 cal Model for the Selective Electroreduction of Nitr
 ate to Am-
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 782--786
+Underfull \hbox (badness 1205) in paragraph at lines 818--822
 \TU/DejaVuSerif(0)/m/it/10 monia. \TU/DejaVuSerif(0)/b/n/10 The Journal of Phys
 ical Chemistry Letters \TU/DejaVuSerif(0)/m/it/10 (2022).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--790
+Underfull \hbox (badness 10000) in paragraph at lines 823--826
 []\TU/DejaVuSerif(0)/m/it/10 [6] Subhadarshini S.; Pumera M. Single Atom Cataly
 st
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 787--790
+Underfull \hbox (badness 10000) in paragraph at lines 823--826
 \TU/DejaVuSerif(0)/m/it/10 for Nitrate-to-Ammonia Electrochemistry. \TU/DejaVuS
 erif(0)/b/n/10 Small \TU/DejaVuSerif(0)/m/it/10 (2024).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 800--804
+Underfull \hbox (badness 10000) in paragraph at lines 836--840
 []\TU/DejaVuSerif(0)/m/it/10 [9] Surface coordination chemistry on graphene and
  two-
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 800--804
+Underfull \hbox (badness 1360) in paragraph at lines 836--840
 \TU/DejaVuSerif(0)/m/it/10 dimensional carbon materials for well-defined single
  atom sup-
  []
 
-[14]
-Underfull \hbox (badness 1122) in paragraph at lines 810--815
+
+Underfull \hbox (badness 1122) in paragraph at lines 846--851
 \TU/DejaVuSerif(0)/m/it/10 son H. Assessment of Constant-Potential Implicit Sol
 vation Cal-
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 810--815
+Underfull \hbox (badness 2134) in paragraph at lines 846--851
 \TU/DejaVuSerif(0)/m/it/10 culations of Electrochemical Energy Barriers for H₂ 
 Evolution
  []
 
 
-Underfull \hbox (badness 7814) in paragraph at lines 810--815
+Underfull \hbox (badness 7814) in paragraph at lines 846--851
 \TU/DejaVuSerif(0)/m/it/10 on Pt. \TU/DejaVuSerif(0)/b/n/10 The Journal of Phys
 ical Chemistry C \TU/DejaVuSerif(0)/m/it/10 (2019).
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 866--869
 []\TU/DejaVuSerif(0)/m/it/10 [15] García-Ratés M.; López N. Multigrid-Based Met
 hodol-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+Underfull \hbox (badness 10000) in paragraph at lines 866--869
 \TU/DejaVuSerif(0)/m/it/10 ogy for Implicit Solvation Models in Periodic DFT. \
 TU/DejaVuSerif(0)/b/n/10 Jour-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
+Underfull \hbox (badness 10000) in paragraph at lines 866--869
 \TU/DejaVuSerif(0)/b/n/10 nal of Chemical Theory and Computation \TU/DejaVuSeri
 f(0)/m/it/10 (2016).
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 834--838
+Underfull \hbox (badness 2126) in paragraph at lines 870--874
 []\TU/DejaVuSerif(0)/m/it/10 [16] Priyadarsini A.; Kattel S. New Insights into 
 the Electro-
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 843--847
+Underfull \hbox (badness 5832) in paragraph at lines 879--883
 []\TU/DejaVuSerif(0)/m/it/10 [18] Jia Y.; Ji Y.-G.; Xue Q.; Li F.-M. Efficient 
 Nitrate-to-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--847
+Underfull \hbox (badness 10000) in paragraph at lines 879--883
 \TU/DejaVuSerif(0)/m/it/10 Ammonia Electroreduction at Cobalt Phosphide Nanoshu
 t-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 843--847
+Underfull \hbox (badness 10000) in paragraph at lines 879--883
 \TU/DejaVuSerif(0)/m/it/10 tles. \TU/DejaVuSerif(0)/b/n/10 ACS Applied Material
 s & Interfaces \TU/DejaVuSerif(0)/m/it/10 (2021).
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 848--852
+Underfull \hbox (badness 3375) in paragraph at lines 884--888
 []\TU/DejaVuSerif(0)/m/it/10 [19] Liu M.; Mao Q.; Shi K.; Wang Z. Electroreduct
 ion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--852
+Underfull \hbox (badness 10000) in paragraph at lines 884--888
 \TU/DejaVuSerif(0)/m/it/10 Nitrate to Ammonia on Palladium–Cobalt–Oxygen Nanowi
 re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 848--852
+Underfull \hbox (badness 10000) in paragraph at lines 884--888
 \TU/DejaVuSerif(0)/m/it/10 Arrays. \TU/DejaVuSerif(0)/b/n/10 ACS Applied Materi
 als & Interfaces \TU/DejaVuSerif(0)/m/it/10 (2022).
  []
 
-[15]
-Underfull \hbox (badness 5288) in paragraph at lines 857--861
+
+Underfull \hbox (badness 5288) in paragraph at lines 893--897
 []\TU/DejaVuSerif(0)/m/it/10 [21] Zhou X.; Xu W.; Liang Y.; Jiang H. Dynamicall
 y Re-
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 857--861
+Underfull \hbox (badness 2181) in paragraph at lines 893--897
 \TU/DejaVuSerif(0)/m/it/10 structuring Nanoporous Cu–Co Electrocatalyst for Eff
 icient Ni-
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 857--861
+Underfull \hbox (badness 4518) in paragraph at lines 893--897
 \TU/DejaVuSerif(0)/m/it/10 trate Electroreduction to Ammonia. \TU/DejaVuSerif(0
 )/b/n/10 ACS Catalysis \TU/DejaVuSerif(0)/m/it/10 (2024).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--866
+Underfull \hbox (badness 10000) in paragraph at lines 898--902
 []\TU/DejaVuSerif(0)/m/it/10 [22] Yin H.; Peng Y.; Li J. Electrocatalytic Reduc
 tion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--866
+Underfull \hbox (badness 10000) in paragraph at lines 898--902
 \TU/DejaVuSerif(0)/m/it/10 Nitrate to Ammonia via a Au/Cu Single Atom Alloy Cat
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--866
+Underfull \hbox (badness 10000) in paragraph at lines 898--902
 \TU/DejaVuSerif(0)/m/it/10 alyst. \TU/DejaVuSerif(0)/b/n/10 Environmental Scien
 ce & Technology \TU/DejaVuSerif(0)/m/it/10 (2023).
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 867--872
+Underfull \hbox (badness 2285) in paragraph at lines 903--908
 []\TU/DejaVuSerif(0)/m/it/10 [23] Long X.; Huang F.; Zhong T.; Zhao H. One-Step
  Strat-
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 867--872
+Underfull \hbox (badness 1596) in paragraph at lines 903--908
 \TU/DejaVuSerif(0)/m/it/10 tron Supply. \TU/DejaVuSerif(0)/b/n/10 Environmental
  Science & Technology \TU/DejaVuSerif(0)/m/it/10 (2025).
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 873--877
+Underfull \hbox (badness 3168) in paragraph at lines 909--913
 []\TU/DejaVuSerif(0)/m/it/10 [24] Liu Z.; Sun Y.-F.; Wang Y.-S.; Zhang W. Optim
 al Solu-
  []
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 873--877
+Underfull \hbox (badness 3049) in paragraph at lines 909--913
 \TU/DejaVuSerif(0)/m/it/10 tion for Modeling Electrocatalysis on Two-Dimensiona
 l Single-
  []
 
-[16] (manuscript/manuscript.aux)
+[16] [17] (manuscript/manuscript.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1376,12 +1375,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18459 strings out of 476878
- 339594 string characters out of 5805249
+ 18460 strings out of 476878
+ 339598 string characters out of 5805249
  1931627 words of memory out of 5000000
- 40116 multiletter control sequences out of 15000+600000
+ 40117 multiletter control sequences out of 15000+600000
  562474 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,7n,122p,1018b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manuscript/manuscript.pdf (16 pages).
+Output written on manuscript/manuscript.pdf (17 pages).

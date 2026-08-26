@@ -152,11 +152,19 @@ Finally, the data should support a conclusion proportionate to the model. If the
 
 ## 6. Study strengths and limitations
 
-The principal strength of this study is its separation of evidence classes. The structure generator, geometry audit, convergence benchmark, run-status parser, and claim-to-evidence matrix make it difficult to confuse a valid input with an accepted chemical result. This is particularly important for nitrate reduction because the literature spans extended metal surfaces, atomically dispersed sites, experimentally reconstructed catalysts, and different electrochemical reference models [1] [3] [4] [5]. The workflow therefore offers a practical safeguard against transferring a descriptor or mechanistic conclusion beyond the model in which it was established.
+The repair classification for the principal limitations is summarised in Table 5. The principal strength of this study is its separation of evidence classes. The structure generator, geometry audit, convergence benchmark, run-status parser, and claim-to-evidence matrix make it difficult to confuse a valid input with an accepted chemical result. This is particularly important for nitrate reduction because the literature spans extended metal surfaces, atomically dispersed sites, experimentally reconstructed catalysts, and different electrochemical reference models [1] [3] [4] [5]. The workflow therefore offers a practical safeguard against transferring a descriptor or mechanistic conclusion beyond the model in which it was established.
 
 The principal limitation is that the benchmark is not a completed electrochemical screen. The compact convergence calculations use absolute total energies on graphene rather than adsorption-energy differences on each SAC. Nitrate charge, interfacial solvation, potential-dependent adsorption, and constant-potential effects remain unresolved in the executed dataset, although these are recognised methodological issues in electrochemical DFT [10] [11] [12] [15] [24]. The two plane-wave SAC runs are non-converged diagnostics, and the earlier LCAO run is not merged with them. These limitations constrain the conclusions to workflow readiness and numerical sensitivity.
 
 The novelty of the work is consequently methodological and evidentiary, not a new catalyst identity. The study contributes a reproducible gate system that quantifies whether a proposed nitrate-SAC screen is ready to support scientific interpretation. It does not claim a superior metal, a new reaction mechanism, or a new activity descriptor.
+
+| Limitation class | Current status | Scientific remedy |
+|---|---|---|
+| Repairable presentation and provenance | Abstract citations, grouped citations, missing cross-references, and dense tables corrected | Maintain automated citation, cross-reference, source-data, and rendering audits |
+| Analysis-repairable interpretation | Absolute-energy convergence and mixed calculator diagnostics retained as diagnostic evidence | Report them only as numerical-sensitivity evidence and never as catalytic ranking data |
+| Calculation-blocked chemistry | No accepted 30-SAC adsorption, solvation, potential, pathway, stability, or uncertainty dataset | Execute the production campaign with converged chemical observables, magnetic-state sampling, charged-species treatment, solvation, and stability checks |
+
+**Table 5.** Limitation classification and repair pathway. The table is a synthesis of the archived project audit and does not introduce unexecuted numerical results.
 
 ## 7. Future production recommendations
 
