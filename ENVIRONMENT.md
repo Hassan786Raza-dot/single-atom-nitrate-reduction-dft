@@ -16,11 +16,11 @@ sudo apt-get install -y gpaw gpaw-data python3.12-venv
 export GPAW_SETUP_PATH=/usr/share/gpaw-setups:$HOME/gpaw-data/gpaw-basis-NAO-sz+coopt-NGTO-0.9.11271
 ```
 
-The GPAW PAW dataset directory is already present on the working system. Network retrieval of the official setup package returned HTTP 403 during this session, so the preinstalled Ubuntu dataset was used. The dataset path, GPAW version, Python version, NumPy/SciPy versions, and calculation logs must be recorded for any result intended for publication.
+The GPAW PAW dataset directory is already present on the working system. Network retrieval of the official setup package returned HTTP 403 during this session, so the preinstalled Ubuntu dataset was used. The dataset path, GPAW version, Python version, NumPy/SciPy versions, and calculation logs must be recorded for any result intended for publication. The GPAW runner scripts now default to `/usr/share/gpaw-setups` when `GPAW_SETUP_PATH` is unset, while still allowing an explicit user-supplied path.
 
 ## Validation status
 
-A periodic graphene smoke test completed successfully. A Fe@graphene coarse plane-wave run completed five ionic steps but did not meet the requested final force threshold and is therefore not an accepted optimised structure. The initial LCAO and plane-wave results are retained as diagnostics only; they must not be combined into one quantitative dataset.
+A periodic graphene smoke test completed successfully. A Fe@graphene coarse plane-wave run completed five ionic steps but did not meet the requested final force threshold and is therefore not an accepted optimised structure. A separate 250 eV representative run was attempted with a 0.05 eV Å⁻¹ target and interrupted after six ionic steps because of sandbox resource limits; its partial logs are retained under `data/gpaw_production/Fe_graphene_PW250/` and remain diagnostic-only. The initial LCAO and plane-wave results are retained as diagnostics only; they must not be combined into one quantitative dataset.
 
 ## Important limitation
 
