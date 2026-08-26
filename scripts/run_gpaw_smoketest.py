@@ -7,7 +7,7 @@ from gpaw import GPAW, PW
 out = Path('data/gpaw_smoketest')
 out.mkdir(parents=True, exist_ok=True)
 atoms = graphene(a=2.46, size=(2, 2, 1), vacuum=12.0)
-atoms.calc = GPAW(mode='lcao', basis='dzp', xc='PBE', kpts=(1, 1, 1),
+atoms.calc = GPAW(mode=PW(250), xc='PBE', kpts=(1, 1, 1),
                   occupations={'name': 'fermi-dirac', 'width': 0.1},
                   convergence={'energy': 1e-5}, txt=str(out / 'gpaw.txt'))
 energy_before = atoms.get_potential_energy()

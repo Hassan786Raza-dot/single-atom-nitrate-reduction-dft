@@ -1,4 +1,4 @@
-#!/usr/bin/env /usr/bin/python3
+#!/usr/bin/python3
 """Generate initial periodic support, defect, and bare-SAC geometries.
 
 These are starting structures for optimisation, not relaxed structures or
