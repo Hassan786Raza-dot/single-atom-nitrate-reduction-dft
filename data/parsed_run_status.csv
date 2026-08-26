@@ -1,0 +1,5 @@
+run_dir,structure,energy_before_eV,energy_after_eV,converged,optimizer_steps,acceptance
+data/gpaw_runs/Fe_MoS2_pw,structures/initial/ase_generated/MoS2_Svac/Fe@MoS2_Svac.vasp,-306.601389979665,-308.047546302374,False,5,DIAGNOSTIC_ONLY
+data/gpaw_runs/Fe_graphene,structures/initial/ase_generated/graphene_N4/Fe@graphene_N4.vasp,-262.728306101863,-265.130677384628,True,12,PASS
+data/gpaw_runs/Fe_graphene_lcao_sz,structures/initial/ase_generated/graphene_N4/Fe@graphene_N4.vasp,-199.182243545699,-201.959605186400,False,5,DIAGNOSTIC_ONLY
+data/gpaw_runs/Fe_graphene_pw,structures/initial/ase_generated/graphene_N4/Fe@graphene_N4.vasp,-7.712643246012,-13.795566612768,False,5,DIAGNOSTIC_ONLY
