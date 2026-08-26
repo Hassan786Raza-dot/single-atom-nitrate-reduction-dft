@@ -1,5 +1,10 @@
 #!/usr/bin/env /usr/bin/python3
+import os
 from pathlib import Path
+
+# Prefer the documented system PAW datasets when the caller has not set a path.
+os.environ.setdefault('GPAW_SETUP_PATH', '/usr/share/gpaw-setups')
+
 from ase.build import graphene
 from ase.optimize import BFGS
 from gpaw import GPAW, PW

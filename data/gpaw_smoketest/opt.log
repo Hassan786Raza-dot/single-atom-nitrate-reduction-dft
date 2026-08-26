@@ -2,3 +2,5 @@
 BFGS:    0 20:12:32      -62.515930        0.000000
       Step     Time          Energy          fmax
 BFGS:    0 20:26:49      -52.554961        0.000000
+      Step     Time          Energy          fmax
+BFGS:    0 22:29:52      -52.554961        0.000000

@@ -1,7 +1,11 @@
 #!/usr/bin/env /usr/bin/python3
 from __future__ import annotations
 import argparse
+import os
 from pathlib import Path
+
+# Prefer the documented system PAW datasets when the caller has not set a path.
+os.environ.setdefault('GPAW_SETUP_PATH', '/usr/share/gpaw-setups')
 from ase.io.vasp import read_vasp
 from ase.optimize import BFGS
 from gpaw import GPAW, PW
