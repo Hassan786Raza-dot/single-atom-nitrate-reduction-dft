@@ -16,7 +16,7 @@ METALS = ["Fe", "Co", "Ni", "Cu", "Zn", "Ru", "Rh", "Pd", "Pt", "Au"]
 SUPPORTS = ["graphene_N4", "MoS2_Svac", "gC3N4_N4"]
 
 
-def build_gc3n4(size: int = 4, vacuum: float = 18.0) -> Atoms:
+def build_gc3n4(size: int = 4, vacuum: float = 24.0) -> Atoms:
     """Build a simple periodic C3N4-like planar model for starting geometries.
 
     The model is intentionally labelled as a structural starting model; it is
@@ -52,7 +52,7 @@ def build_support(name: str, size: int = 4) -> Atoms:
         del atoms[s_indices[0]]
         return atoms
     if name == "gC3N4_N4":
-        atoms = build_gc3n4(size=size, vacuum=18.0)
+        atoms = build_gc3n4(size=size, vacuum=24.0)
         return atoms
     raise ValueError(f"Unknown support: {name}")
 

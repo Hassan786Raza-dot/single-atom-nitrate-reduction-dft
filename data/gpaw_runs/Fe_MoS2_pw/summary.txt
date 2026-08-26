@@ -1,0 +1,5 @@
+structure=structures/initial/ase_generated/MoS2_Svac/Fe@MoS2_Svac.vasp
+energy_before_eV=-306.601389979665
+energy_after_eV=-308.047546302374
+converged=False
+optimizer_steps=5

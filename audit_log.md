@@ -21,3 +21,15 @@ VASP, Quantum ESPRESSO, CP2K, ORCA, and xTB were unavailable in the initial envi
 The ASE structure generator initially failed because of version-specific builder arguments and an incorrectly scaled g-C3N4 fractional-coordinate construction. Both defects were corrected. The regenerated structure set contains 36 files: three pristine/defect support models and 30 bare SAC starting geometries. The automated geometry audit now reports zero failures.
 
 A first genuine Fe@graphene periodic GPAW optimisation converged in 12 ionic steps under a low-cost LCAO pre-screening setting. This is a computational smoke/pre-screen result, not yet a publication-grade convergence result.
+
+## 2026-08-27 — Periodic convergence matrix
+
+An 11-case GPAW plane-wave matrix was executed on a compact graphene benchmark covering cutoffs of 150/250/350 eV, 1×1×1/2×2×1/3×3×1 k-meshes, 10/15/20 Å vacuum, and spin-polarised versus non-spin-polarised settings. The raw GPAW outputs and `data/convergence/convergence.csv` are archived.
+
+The total-energy changes with cutoff and k-point mesh are large enough that a converged production setting cannot be inferred from this first matrix. Total energies were not used to rank SACs. The result is a quality-control finding: additional difference-energy convergence tests, support-size tests, and consistent magnetic-state checks are required before treating the 30-model matrix as publication-grade.
+
+## 2026-08-27 — Structure and coarse optimisation audit
+
+The structure generator produced 36 periodic structures and the adsorbate generator produced 60 nitrate/hydrogen starting structures. After correcting fractional translations and the g-C3N4 cell height, both audits passed with zero failures.
+
+Two coarse plane-wave GPAW optimisations were run: Fe@graphene and Fe@MoS2. Each used a 150 eV cutoff, Gamma-only sampling, five ionic steps, and a 0.50 eV/Å stopping target. Both completed without a calculator crash but remained non-converged under the requested production standard. Their raw outputs are retained for diagnostics only and are excluded from any activity ranking.

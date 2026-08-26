@@ -1,21 +1,19 @@
 # Project Status
 
-## Completed in the initial reproducible stage
+## Verified completed work
 
-The repository, literature seed dataset, critical synthesis, support/metal selection, periodic-DFT protocol, data conventions, deterministic chemistry utilities, unit tests, validation report, and audit log are complete and synchronised to GitHub.
+The open-source route is GPAW 24.1.0 with ASE, Ubuntu PAW datasets, and a NumPy/SciPy-compatible isolated runtime. A periodic graphene smoke calculation completed successfully. Three support families were generated: nitrogenated graphene, a 2H-MoS₂ sulphur-vacancy model, and a labelled g-C₃N₄-like starting model. The repository contains 36 audited pristine/defect/bare-SAC structures and 60 audited nitrate/hydrogen starting geometries.
 
-## Pending prerequisites
+An 11-case compact convergence matrix covering cutoff, k-point mesh, vacuum, and spin settings was executed. The audit correctly flags cutoff, k-point, and vacuum ranges for refinement; only the compact spin comparison passed the provisional tolerance. A coarse Fe@graphene plane-wave optimisation was executed and its raw output is archived, but it did not meet the requested final force criterion and is not accepted as a production result.
 
-The full 30-model SAC matrix, optimised geometries, adsorption energies, transition states, projected densities of states, Bader or Hirshfeld charges, solvation corrections, stability metrics, selectivity analysis, figures, tables, and manuscript results require executed periodic DFT calculations. Those outputs are intentionally absent until they can be generated and checked under a named software version and computational environment.
+## Not yet publication-grade
 
-## Next executable stage
+The complete 30-model optimisation matrix, adsorption energies, solvation corrections, transition states, free-energy diagrams, stability metrics, selectivity analysis, and manuscript results are not yet scientifically accepted. The current sandbox has six CPUs and approximately 3.8 GiB RAM; the generated 4 × 4 periodic slabs, especially the 129-atom g-C₃N₄-like models, require substantially more compute for converged spin-polarised plane-wave optimisation. Running an incomplete or coarse batch would not satisfy a Q1 publication standard.
 
-1. Install or provide access to a periodic DFT engine and establish the licence/academic-use conditions.
-2. Generate and inspect pristine-support and defect geometries.
-3. Converge cell, vacuum, cutoff, k-point, spin, and slab-size settings.
-4. Optimise the 30 bare SAC models, preserving all raw outputs.
-5. Begin nitrate/H* screening, then expand to the complete pathway for shortlisted systems.
+## Execution rule
 
-## Quality gate
+No numerical result is promoted into the final dataset unless the calculation reaches the declared convergence criteria, has a complete raw-output archive, passes geometry and spin checks, and uses settings supported by the convergence study. Coarse diagnostics remain explicitly labelled as such.
 
-No candidate may be called a best catalyst, no limiting potential may be reported as a result, and no publication-ready manuscript may be written around numerical findings until the validation and audit gates in `validation_report.md` are passed.
+## Next required computational stage
+
+Run the 30 SAC optimisations on a suitably resourced CPU cluster or connected workstation using the archived structures and the GPAW/VASP-compatible input policies. Then repeat adsorption and pathway calculations for shortlisted systems, including consistent charged-nitrate treatment, solvation sensitivity, thermochemistry, and electrochemical-potential validation.
