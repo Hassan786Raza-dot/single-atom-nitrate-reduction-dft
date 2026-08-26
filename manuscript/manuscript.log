@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.26)  26 AUG 2026 21:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2026.8.26)  26 AUG 2026 21:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1071,43 +1071,43 @@ LaTeX Font Info:    Font shape `TU/DejaVuSerif(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 131.
 [1
 
-] [2]
+] [2] [3]
 LaTeX Font Info:    Font shape `TU/DejaVuSerif(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 228.
+(Font)              scaled to size 9.0pt on input line 242.
 LaTeX Font Info:    Font shape `TU/DejaVuSerif(0)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 253.
- [3] [4]
+(Font)              scaled to size 9.0pt on input line 267.
+ [4]
 LaTeX Font Info:    Font shape `TU/DejaVuSansMono(0)/m/n' will be
-(Font)              scaled to size 9.49112pt on input line 302.
+(Font)              scaled to size 9.49112pt on input line 321.
 
-Underfull \hbox (badness 1990) in paragraph at lines 319--329
+Underfull \hbox (badness 1990) in paragraph at lines 338--348
 \TU/DejaVuSerif(0)/m/n/10 with a documented exchange–correlation functional, di
 spersion
  []
 
 [5]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.42989pt on input line 345.
+(Font)              scaled to size 8.42989pt on input line 364.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.02135pt on input line 345.
+(Font)              scaled to size 6.02135pt on input line 364.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-45.
+64.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.04391pt on input line 345.
+(Font)              scaled to size 12.04391pt on input line 364.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.43074pt on input line 345.
+(Font)              scaled to size 8.43074pt on input line 364.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.02196pt on input line 345.
+(Font)              scaled to size 6.02196pt on input line 364.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 12.04147pt on input line 345.
+(Font)              scaled to size 12.04147pt on input line 364.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 8.42903pt on input line 345.
+(Font)              scaled to size 8.42903pt on input line 364.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.02074pt on input line 345.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 345
+(Font)              scaled to size 6.02074pt on input line 364.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 364
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1116,7 +1116,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 345
+LaTeX Font Info:    Trying to load font information for U+msb on input line 364
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1124,242 +1124,248 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-Overfull \hbox (8.4581pt too wide) in paragraph at lines 412--412
+) [6]
+Overfull \hbox (8.4581pt too wide) in paragraph at lines 434--434
 []|\TU/DejaVuSerif(0)/m/n/9 Support/reference 
  []
 
-[6]
-Overfull \hbox (3.32666pt too wide) in paragraph at lines 464--464
-[]|\TU/DejaVuSerif(0)/m/n/9 Fe@graphene|  
- []
-
-
-Overfull \hbox (3.32666pt too wide) in paragraph at lines 466--466
-[]|\TU/DejaVuSerif(0)/m/n/9 Fe@graphene|  
- []
-
 [7]
+Overfull \hbox (3.32666pt too wide) in paragraph at lines 491--491
+[]|\TU/DejaVuSerif(0)/m/n/9 Fe@graphene|  
+ []
+
+
+Overfull \hbox (3.32666pt too wide) in paragraph at lines 493--493
+[]|\TU/DejaVuSerif(0)/m/n/9 Fe@graphene|  
+ []
+
+[8]
 File: figures/final/convergence_benchmark.png Graphic file (type bmp)
 <figures/final/convergence_benchmark.png>
- [8] [9]
-Underfull \hbox (badness 2221) in paragraph at lines 582--591
+ [9] [10]
+Underfull \hbox (badness 2221) in paragraph at lines 620--629
 \TU/DejaVuSerif(0)/m/n/10 nitrate-to-nitrite and nitrite-to-ammonia alternative
 s, competing
  []
 
-[10]
-Underfull \hbox (badness 2027) in paragraph at lines 630--640
+[11]
+Underfull \hbox (badness 1629) in paragraph at lines 685--695
+\TU/DejaVuSerif(0)/m/n/10 dependent or grand-canonical calculations alter the s
+hortlisted
+ []
+
+[12]
+Underfull \hbox (badness 2027) in paragraph at lines 734--744
 \TU/DejaVuSerif(0)/m/n/10 tion confirmed executable electronic-structure capabi
 lity. The
  []
 
+[13]
 
 LaTeX Font Warning: Font shape `TU/DejaVuSerif(0)/m/it' undefined
-(Font)              using `TU/DejaVuSerif(0)/m/n' instead on input line 658.
+(Font)              using `TU/DejaVuSerif(0)/m/n' instead on input line 763.
 
-[11]
 LaTeX Font Info:    Font shape `TU/DejaVuSerif(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 662.
+(Font)              scaled to size 10.0pt on input line 767.
 
-Underfull \hbox (badness 5316) in paragraph at lines 672--676
+Underfull \hbox (badness 5316) in paragraph at lines 777--781
 []\TU/DejaVuSerif(0)/m/it/10 [4] Liu J.-X.; Richards D.; Singh N.; Goldsmith B.
  R. Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--676
+Underfull \hbox (badness 10000) in paragraph at lines 777--781
 \TU/DejaVuSerif(0)/m/it/10 tivity and Selectivity Trends in Electrocatalytic Ni
 trate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 672--676
+Underfull \hbox (badness 10000) in paragraph at lines 777--781
 \TU/DejaVuSerif(0)/m/it/10 Reduction on Transition Metals. \TU/DejaVuSerif(0)/b
 /n/10 ACS Catalysis \TU/DejaVuSerif(0)/m/it/10 (2019).
  []
 
 
-Underfull \hbox (badness 5490) in paragraph at lines 677--681
+Underfull \hbox (badness 5490) in paragraph at lines 782--786
 []\TU/DejaVuSerif(0)/m/it/10 [5] Mou T.; Wang Y.; Deák P.; Li H. Predictive The
 oreti-
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 677--681
+Underfull \hbox (badness 1142) in paragraph at lines 782--786
 \TU/DejaVuSerif(0)/m/it/10 cal Model for the Selective Electroreduction of Nitr
 ate to Am-
  []
 
 
-Underfull \hbox (badness 1205) in paragraph at lines 677--681
+Underfull \hbox (badness 1205) in paragraph at lines 782--786
 \TU/DejaVuSerif(0)/m/it/10 monia. \TU/DejaVuSerif(0)/b/n/10 The Journal of Phys
 ical Chemistry Letters \TU/DejaVuSerif(0)/m/it/10 (2022).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 682--685
+Underfull \hbox (badness 10000) in paragraph at lines 787--790
 []\TU/DejaVuSerif(0)/m/it/10 [6] Subhadarshini S.; Pumera M. Single Atom Cataly
 st
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 682--685
+Underfull \hbox (badness 10000) in paragraph at lines 787--790
 \TU/DejaVuSerif(0)/m/it/10 for Nitrate-to-Ammonia Electrochemistry. \TU/DejaVuS
 erif(0)/b/n/10 Small \TU/DejaVuSerif(0)/m/it/10 (2024).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 695--699
+Underfull \hbox (badness 10000) in paragraph at lines 800--804
 []\TU/DejaVuSerif(0)/m/it/10 [9] Surface coordination chemistry on graphene and
  two-
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 695--699
+Underfull \hbox (badness 1360) in paragraph at lines 800--804
 \TU/DejaVuSerif(0)/m/it/10 dimensional carbon materials for well-defined single
  atom sup-
  []
 
-[12]
-Underfull \hbox (badness 1122) in paragraph at lines 705--710
+[14]
+Underfull \hbox (badness 1122) in paragraph at lines 810--815
 \TU/DejaVuSerif(0)/m/it/10 son H. Assessment of Constant-Potential Implicit Sol
 vation Cal-
  []
 
 
-Underfull \hbox (badness 2134) in paragraph at lines 705--710
+Underfull \hbox (badness 2134) in paragraph at lines 810--815
 \TU/DejaVuSerif(0)/m/it/10 culations of Electrochemical Energy Barriers for H₂ 
 Evolution
  []
 
 
-Underfull \hbox (badness 7814) in paragraph at lines 705--710
+Underfull \hbox (badness 7814) in paragraph at lines 810--815
 \TU/DejaVuSerif(0)/m/it/10 on Pt. \TU/DejaVuSerif(0)/b/n/10 The Journal of Phys
 ical Chemistry C \TU/DejaVuSerif(0)/m/it/10 (2019).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
+Underfull \hbox (badness 10000) in paragraph at lines 830--833
 []\TU/DejaVuSerif(0)/m/it/10 [15] García-Ratés M.; López N. Multigrid-Based Met
 hodol-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
+Underfull \hbox (badness 10000) in paragraph at lines 830--833
 \TU/DejaVuSerif(0)/m/it/10 ogy for Implicit Solvation Models in Periodic DFT. \
 TU/DejaVuSerif(0)/b/n/10 Jour-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--728
+Underfull \hbox (badness 10000) in paragraph at lines 830--833
 \TU/DejaVuSerif(0)/b/n/10 nal of Chemical Theory and Computation \TU/DejaVuSeri
 f(0)/m/it/10 (2016).
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 729--733
+Underfull \hbox (badness 2126) in paragraph at lines 834--838
 []\TU/DejaVuSerif(0)/m/it/10 [16] Priyadarsini A.; Kattel S. New Insights into 
 the Electro-
  []
 
 
-Underfull \hbox (badness 5832) in paragraph at lines 738--742
+Underfull \hbox (badness 5832) in paragraph at lines 843--847
 []\TU/DejaVuSerif(0)/m/it/10 [18] Jia Y.; Ji Y.-G.; Xue Q.; Li F.-M. Efficient 
 Nitrate-to-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--742
+Underfull \hbox (badness 10000) in paragraph at lines 843--847
 \TU/DejaVuSerif(0)/m/it/10 Ammonia Electroreduction at Cobalt Phosphide Nanoshu
 t-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 738--742
+Underfull \hbox (badness 10000) in paragraph at lines 843--847
 \TU/DejaVuSerif(0)/m/it/10 tles. \TU/DejaVuSerif(0)/b/n/10 ACS Applied Material
 s & Interfaces \TU/DejaVuSerif(0)/m/it/10 (2021).
  []
 
 
-Underfull \hbox (badness 3375) in paragraph at lines 743--747
+Underfull \hbox (badness 3375) in paragraph at lines 848--852
 []\TU/DejaVuSerif(0)/m/it/10 [19] Liu M.; Mao Q.; Shi K.; Wang Z. Electroreduct
 ion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--747
+Underfull \hbox (badness 10000) in paragraph at lines 848--852
 \TU/DejaVuSerif(0)/m/it/10 Nitrate to Ammonia on Palladium–Cobalt–Oxygen Nanowi
 re
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 743--747
+Underfull \hbox (badness 10000) in paragraph at lines 848--852
 \TU/DejaVuSerif(0)/m/it/10 Arrays. \TU/DejaVuSerif(0)/b/n/10 ACS Applied Materi
 als & Interfaces \TU/DejaVuSerif(0)/m/it/10 (2022).
  []
 
-
-Underfull \hbox (badness 5288) in paragraph at lines 752--756
+[15]
+Underfull \hbox (badness 5288) in paragraph at lines 857--861
 []\TU/DejaVuSerif(0)/m/it/10 [21] Zhou X.; Xu W.; Liang Y.; Jiang H. Dynamicall
 y Re-
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 752--756
+Underfull \hbox (badness 2181) in paragraph at lines 857--861
 \TU/DejaVuSerif(0)/m/it/10 structuring Nanoporous Cu–Co Electrocatalyst for Eff
 icient Ni-
  []
 
 
-Underfull \hbox (badness 4518) in paragraph at lines 752--756
+Underfull \hbox (badness 4518) in paragraph at lines 857--861
 \TU/DejaVuSerif(0)/m/it/10 trate Electroreduction to Ammonia. \TU/DejaVuSerif(0
 )/b/n/10 ACS Catalysis \TU/DejaVuSerif(0)/m/it/10 (2024).
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 757--761
+
+Underfull \hbox (badness 10000) in paragraph at lines 862--866
 []\TU/DejaVuSerif(0)/m/it/10 [22] Yin H.; Peng Y.; Li J. Electrocatalytic Reduc
 tion of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--761
+Underfull \hbox (badness 10000) in paragraph at lines 862--866
 \TU/DejaVuSerif(0)/m/it/10 Nitrate to Ammonia via a Au/Cu Single Atom Alloy Cat
 -
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 757--761
+Underfull \hbox (badness 10000) in paragraph at lines 862--866
 \TU/DejaVuSerif(0)/m/it/10 alyst. \TU/DejaVuSerif(0)/b/n/10 Environmental Scien
 ce & Technology \TU/DejaVuSerif(0)/m/it/10 (2023).
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 762--767
+Underfull \hbox (badness 2285) in paragraph at lines 867--872
 []\TU/DejaVuSerif(0)/m/it/10 [23] Long X.; Huang F.; Zhong T.; Zhao H. One-Step
  Strat-
  []
 
 
-Underfull \hbox (badness 1596) in paragraph at lines 762--767
+Underfull \hbox (badness 1596) in paragraph at lines 867--872
 \TU/DejaVuSerif(0)/m/it/10 tron Supply. \TU/DejaVuSerif(0)/b/n/10 Environmental
  Science & Technology \TU/DejaVuSerif(0)/m/it/10 (2025).
  []
 
 
-Underfull \hbox (badness 3168) in paragraph at lines 768--772
+Underfull \hbox (badness 3168) in paragraph at lines 873--877
 []\TU/DejaVuSerif(0)/m/it/10 [24] Liu Z.; Sun Y.-F.; Wang Y.-S.; Zhang W. Optim
 al Solu-
  []
 
 
-Underfull \hbox (badness 3049) in paragraph at lines 768--772
+Underfull \hbox (badness 3049) in paragraph at lines 873--877
 \TU/DejaVuSerif(0)/m/it/10 tion for Modeling Electrocatalysis on Two-Dimensiona
 l Single-
  []
 
-[14] (manuscript/manuscript.aux)
+[16] (manuscript/manuscript.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1370,12 +1376,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 18455 strings out of 476878
- 339514 string characters out of 5805249
+ 18459 strings out of 476878
+ 339594 string characters out of 5805249
  1931627 words of memory out of 5000000
- 40112 multiletter control sequences out of 15000+600000
+ 40116 multiletter control sequences out of 15000+600000
  562474 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 90i,7n,122p,1018b,485s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,7n,122p,1018b,481s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on manuscript/manuscript.pdf (14 pages).
+Output written on manuscript/manuscript.pdf (16 pages).

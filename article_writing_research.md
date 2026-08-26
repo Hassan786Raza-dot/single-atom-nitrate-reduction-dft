@@ -50,3 +50,13 @@ The selected YouTube lecture is useful for practical communication advice: IMRaD
 ## Implications for the present project
 
 The existing manuscript's principal weakness is not word count. It is that the research question, evidentiary hierarchy, and contribution are not sufficiently differentiated. A revision should choose a defensible article type, remove claims of a completed catalyst screen, report the executed benchmark as the central result, place all pending work in a clearly named future-production section, simplify the tables, and add an explicit claim-to-evidence audit. The project should be judged against a reviewer checklist rather than against a superficial target length.
+
+## Target-journal requirements re-checked
+
+The official Nature Communications Article guidance states that the abstract should be no more than 200 words and contain no references. It recommends a main text of approximately 5,000 words excluding Abstract, Methods, References, and figure legends; an Introduction followed by Results, Discussion where appropriate, and Methods; topical subheadings for Results and Methods; no more than 10 display items as a general guide; and no more than 70 references as a guide. It also requires competing-interests and author-contribution statements before publication. Source data should contain the numerical data underlying graphs/charts, and custom code central to the claims should be available to editors and reviewers.
+
+The official ACS guidance requires standard sections, complete and labelled manuscript components, figures/tables/equations embedded at their point of relevance for initial submission, complete references including titles, and Supporting Information submitted separately. ACS also strongly encourages public availability of the research data underlying the article.
+
+The official RSC Journal of Materials Chemistry A guidance distinguishes Full Papers containing original unpublished scientific work from Communications and review-type articles. It advises that figures, tables, and equations be used for clarity and brevity and not duplicate data unnecessarily. Its general reporting guidance emphasises machine-readable data, appropriate uncertainty/error analysis where statistics are reported, complete experimental/electrochemical conditions, and supplementary material where needed.
+
+The manuscript now satisfies the abstract citation rule, uses one embedded data figure and four compact tables, preserves full source data separately, and identifies code/data availability. It remains a benchmark paper rather than a completed catalyst-discovery Article because the production electrochemical results do not exist.
