@@ -1,0 +1,3 @@
+energy_before_eV=-62.515930180075
+energy_after_eV=-62.515930180075
+converged=True

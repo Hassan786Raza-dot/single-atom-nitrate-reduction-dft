@@ -1,0 +1,5 @@
+structure=structures/initial/ase_generated/graphene_N4/Fe@graphene_N4.vasp
+energy_before_eV=-262.728306101863
+energy_after_eV=-265.130677384628
+converged=True
+optimizer_steps=12
