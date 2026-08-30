@@ -20,21 +20,6 @@ Executed diagnostics use open-source GPAW 24.1.0 and ASE with registered Ubuntu 
 
 Every numerical record must be linked to a structure, input, code and dataset version, calculation identifier, raw output, convergence state, and audit record. Status values distinguish `INPUT_ONLY`, `DIAGNOSTIC_ONLY`, `ACCEPTED`, and `NOT_RUN`. Missing data are not inferred. The final claim-to-evidence matrix prohibits unsupported activity, pathway, and selectivity claims.
 
-## Key documents
-
-| File | Purpose |
-|---|---|
-| `manuscript/manuscript.md` | Redesigned benchmark manuscript |
-| `manuscript/manuscript.pdf` | XeLaTeX-rendered manuscript |
-| `supporting_information/supporting_information.md` | Reproduction and audit details |
-| `article_writing_research.md` | Research-article writing and reporting guidance synthesis |
-| `project_quality_gap_analysis.md` | Whole-project standards-based critique |
-| `article_redesign_spec.md` | New article contribution and structure |
-| `comprehensive_audit_report.md` | Earlier full scientific and publication audit |
-| `claim_evidence_matrix.csv` | Claim-level evidence controls |
-| `figure_table_inventory.md` | Source-data and visualisation inventory |
-| `production_readiness_checklist.md` | Gates for future production DFT |
-| `journal_guidelines_audit.md` | Publisher and journal requirements |
 
 ## Reproduction commands
 
